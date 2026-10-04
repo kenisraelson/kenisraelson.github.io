@@ -1,11 +1,8 @@
-KEN ISRAELSON PORTFOLIO MOCKUP
+Upload index.html and styles.css to the ROOT of kenisraelson.github.io and choose Replace/Commit.
+script.js and the assets folder do not need to change for this update.
 
-Open index.html locally to preview the site.
-
-For GitHub Pages:
-1. Create or open your GitHub Pages repository.
-2. Upload the contents of this folder to the repository root.
-3. In Settings > Pages, choose Deploy from a branch and select main / root.
-
-The resume is included in both PDF and DOCX formats under /resume.
-The image files in /images are web-optimized copies; the originals remain untouched.
+Changes in this update:
+- Restored the editorial CONTACT ending: “Let’s make something worth looking at.”
+- Removed the clipped orange Mercury before/after tile.
+- Removed the redundant Le Rêve before/after comparison.
+- Kept the small copyright footer below the contact section.
