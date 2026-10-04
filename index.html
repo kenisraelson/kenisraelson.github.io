@@ -1,180 +1,214 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Ken Israelson — visual content, product imaging, photography, Photoshop, graphic design and e-commerce production.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ken Israelson — Visual Content / Product Imaging Specialist</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Photography, product imaging, retouching, graphic design, and creative production by Ken Israelson." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Ken Israelson home">
       <span class="brand-name">KEN ISRAELSON</span>
-      <span class="brand-role">Visual Content / Product Imaging Specialist</span>
+      <span class="brand-sub">Visual Content / Product Imaging Specialist</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#resume">Résumé</a>
-      <a href="#contact">Contact</a>
+      <a href="#work">WORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#resume">RÉSUMÉ</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">PHOTOGRAPHY • PHOTOSHOP • GRAPHIC DESIGN • E-COMMERCE</p>
-        <h1>Images built to <em>sell, explain,</em> and stay remembered.</h1>
-        <p class="hero-deck">Commercial photography, product imaging, retouching, compositing and visual storytelling backed by more than 30 years behind the camera.</p>
+      <div class="hero-copy reveal">
+        <div class="eyebrow">PHOTOGRAPHY • DESIGN • VISUAL PRODUCTION</div>
+        <h1>Places. Products.<br>People. Ideas.</h1>
+        <div class="gold-rule"></div>
+        <p>Images built to sell, explain, and stay remembered — from product and e-commerce work to events, automotive, portraiture, and creative compositing.</p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="#work">View selected work</a>
-          <a class="btn btn-ghost" href="resume/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">Open résumé</a>
+          <a class="button gold" href="#work">VIEW WORK <span>→</span></a>
+          <a class="button" href="assets/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">RÉSUMÉ PDF <span>↗</span></a>
         </div>
-        <p class="move-note">Henderson, Nevada • Relocating to Nashville / Murfreesboro, Tennessee in early November 2026</p>
       </div>
-      <figure class="hero-image">
-        <img src="hero-product.jpg" alt="Commercial product photograph of a holster and handgun on an industrial workbench">
+      <figure class="hero-image reveal">
+        <img src="assets/images/hero-product.webp" alt="Commercial holster product photograph on an industrial workbench" fetchpriority="high" />
       </figure>
     </section>
 
-    <section id="work" class="section selected-work">
-      <div class="section-heading">
+    <section class="selected" id="work">
+      <div class="section-heading reveal">
         <div>
-          <p class="eyebrow">SELECTED WORK</p>
-          <h2>Commercial polish.<br>Real-world range.</h2>
+          <div class="eyebrow">SELECTED WORK</div>
+          <h2>Commercial, polished, real-world.</h2>
         </div>
-        <p>Product and e-commerce imagery lead the presentation, supported by automotive, motorsports and event work that shows speed, people, atmosphere and control under pressure.</p>
+        <p>Photography and visual production across products, people, places, and creative campaigns.</p>
       </div>
-
-      <div class="work-grid">
-        <button class="work-card featured portrait" data-image="hero-product.jpg" data-title="Product & E-commerce" data-copy="Controlled product lighting, texture, detail and campaign-ready presentation.">
-          <img src="hero-product.jpg" alt="Holster product photograph on a workbench">
-          <span class="work-caption"><b>Product & E-commerce</b><small>Commercial product imagery</small></span>
-        </button>
-
-        <button class="work-card wide" data-image="auto-drag-blue.jpg" data-title="Motorsports" data-copy="Drag racing coverage with decisive timing, smoke and motion.">
-          <img src="auto-drag-blue.jpg" alt="Blue drag racing car at the track">
-          <span class="work-caption"><b>Motorsports</b><small>Drag racing</small></span>
-        </button>
-
-        <button class="work-card" data-image="event-audience.jpg" data-title="Corporate Events" data-copy="Audience-focused event storytelling under mixed stage lighting.">
-          <img src="event-audience.jpg" alt="Conference audience under blue and magenta stage lighting">
-          <span class="work-caption"><b>Corporate Events</b><small>Audience & atmosphere</small></span>
-        </button>
-
-        <button class="work-card" data-image="auto-hotrod-black.jpg" data-title="Automotive" data-copy="Character-driven automotive coverage with strong mechanical detail.">
-          <img src="auto-hotrod-black.jpg" alt="Black hot rod photographed from a low front angle">
-          <span class="work-caption"><b>Automotive</b><small>Custom & specialty vehicles</small></span>
-        </button>
-
-        <button class="work-card wide crop-night" data-image="auto-drag-night.jpg" data-title="Motorsports at Night" data-copy="A strong action frame built around lateral movement, tire smoke and track light.">
-          <img src="auto-drag-night.jpg" alt="Blue drag racing car producing tire smoke at night">
-          <span class="work-caption"><b>Motorsports</b><small>Night racing</small></span>
-        </button>
-
-        <button class="work-card" data-image="event-huddle.jpg" data-title="Event Storytelling" data-copy="A spontaneous team huddle captured in difficult ambient light.">
-          <img src="event-huddle.jpg" alt="Event participants joining hands in a team huddle">
-          <span class="work-caption"><b>Event Storytelling</b><small>Human moments</small></span>
-        </button>
-
-        <button class="work-card" data-image="wedding-group.jpg" data-title="Weddings & Groups" data-copy="Directed group portraiture with personality and location context.">
-          <img src="wedding-group.jpg" alt="Wedding party group portrait beside an aquarium">
-          <span class="work-caption"><b>Weddings & Groups</b><small>Directed portraiture</small></span>
-        </button>
-
-        <button class="work-card wide" data-image="event-outdoor.jpg" data-title="Corporate Activity" data-copy="Fast, energetic coverage of organized corporate team-building activity.">
-          <img src="event-outdoor.jpg" alt="Outdoor corporate team building tug of war">
-          <span class="work-caption"><b>Corporate Activity</b><small>Team building</small></span>
-        </button>
-
-        <button class="work-card" data-image="event-team.jpg" data-title="Corporate Group" data-copy="Large group photography with clean alignment and event branding.">
-          <img src="event-team.jpg" alt="Large corporate group posing at an event">
-          <span class="work-caption"><b>Corporate Groups</b><small>Event coverage</small></span>
-        </button>
-
-        <button class="work-card" data-image="auto-ratrod.jpg" data-title="Automotive Culture" data-copy="Editorial coverage with a deliberately energetic, off-axis composition.">
-          <img src="auto-ratrod.jpg" alt="Custom rat rod photographed at a car show">
-          <span class="work-caption"><b>Automotive Culture</b><small>Editorial detail</small></span>
-        </button>
-      </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="about-image-wrap">
-        <img src="about-ken.png" alt="Ken Israelson with a Nikon camera">
-      </div>
-      <div class="about-copy">
-        <p class="eyebrow">ABOUT</p>
-        <h2>Photographer. Creator. Problem solver.</h2>
-        <p class="lead">I’m Ken Israelson, a photographer, graphic artist and digital imaging specialist with more than 30 years of photography experience and Adobe Photoshop experience dating back to Photoshop 2.0.</p>
-        <p>My background spans product and commercial photography, portraiture, events, architectural and automotive imagery, retouching, compositing, graphic production and high-volume e-commerce image preparation.</p>
-        <p>I also spent three years supporting Canon EOS customers, helping photographers troubleshoot equipment and better understand photographic technique.</p>
-        <div class="skill-row">
-          <span>Product / Tabletop</span><span>Photoshop / Camera Raw</span><span>Automotive</span><span>Events</span><span>Retouching / Compositing</span><span>Visual Production</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="resume" class="section resume-section">
-      <div class="section-heading resume-heading">
-        <div>
-          <p class="eyebrow">RÉSUMÉ</p>
-          <h2>Experience built around images, people and production.</h2>
-        </div>
-        <div class="resume-actions">
-          <a class="btn btn-gold" href="resume/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">View PDF</a>
-          <a class="btn btn-ghost" href="resume/Ken_Israelson_Resume_2026.docx">Download DOCX</a>
-        </div>
-      </div>
-
-      <div class="resume-grid">
-        <article>
-          <p class="resume-date">JULY 2026 — PRESENT</p>
-          <h3>We The People Holsters</h3>
-          <h4>Graphic Artist / Product Photographer / Digital Imaging Specialist</h4>
-          <p>Product photography and digital imagery for e-commerce, advertising, social media and marketing; Camera Raw and Photoshop production; retouching, masking, compositing and standardized high-volume image sets.</p>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <div class="media"><img src="assets/images/nvme-enclosure.webp" alt="Cinematic NVMe enclosure product photograph" /></div>
+          <div class="card-copy"><strong>PRODUCT &amp; E-COMMERCE</strong><span>Clean. Detailed. Effective.</span></div>
         </article>
-        <article>
-          <p class="resume-date">SEPTEMBER 2013 — PRESENT</p>
-          <h3>Cashman Professional</h3>
-          <h4>Professional Photographer / Trainer / Customer Service</h4>
-          <p>Weddings, corporate and social events, portraits and professional assignments; staff training, client-facing production and Photoshop post-production.</p>
+        <article class="feature-card reveal">
+          <div class="media"><img src="assets/images/alaska-river.webp" alt="Long exposure forest stream in Alaska" /></div>
+          <div class="card-copy"><strong>PLACES &amp; PERSPECTIVES</strong><span>Landscape, travel, and atmosphere.</span></div>
         </article>
-        <article>
-          <p class="resume-date">MAY 2008 — MARCH 2011</p>
-          <h3>Canon Information Technology Services</h3>
-          <h4>Technical Support Representative II — EOS Digital Cameras</h4>
-          <p>Technical support, camera troubleshooting and photographer education covering exposure, autofocus, flash, lenses, software and advanced photographic technique.</p>
+        <article class="feature-card reveal">
+          <div class="media"><img src="assets/images/esp-ltd-mh350fm.webp" alt="ESP LTD MH-350FM guitar advertising layout" /></div>
+          <div class="card-copy"><strong>MUSIC &amp; CREATIVE</strong><span>Gear, graphics, and visual storytelling.</span></div>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div>
-        <p class="eyebrow">CONTACT</p>
-        <h2>Let’s make something worth looking at.</h2>
+    <section class="about" id="about">
+      <div class="about-photo reveal">
+        <img src="assets/images/about-ken.webp" alt="Ken Israelson photographing with a Nikon camera" />
       </div>
-      <div class="contact-info">
-        <a href="mailto:kenimail@yahoo.com">kenimail@yahoo.com</a>
-        <a href="tel:+17578165955">757.816.5955</a>
-        <p>Henderson, Nevada</p>
-        <p>Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026</p>
+      <div class="about-copy reveal">
+        <div class="eyebrow">ABOUT</div>
+        <h2>Photographer.<br>Creator. Producer.</h2>
+        <div class="gold-rule short"></div>
+        <p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Chesapeake, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture, and mobile corporate headshots.</p>
+        <p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful — not just decorative.</p>
+        <p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
+      </div>
+    </section>
+
+    <section class="portfolio-block product-block">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the object matter.</h2></div>
+        <p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p>
+      </div>
+      <div class="mosaic product-mosaic">
+        <figure class="tile tall reveal"><img src="assets/images/hero-product.webp" alt="Holster product photograph" loading="lazy"><figcaption>Commercial Product Imaging</figcaption></figure>
+        <figure class="tile reveal"><img src="assets/images/nvme-enclosure.webp" alt="NVMe enclosure on reflective surface" loading="lazy"><figcaption>Tabletop / Technology</figcaption></figure>
+        <figure class="tile reveal"><img src="assets/images/jewelry-glass.webp" alt="Jewelry photographed on glossy glass" loading="lazy"><figcaption>Jewelry / Glass</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="portfolio-block creative-block">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div>
+        <p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p>
+      </div>
+      <div class="mosaic creative-mosaic">
+        <figure class="tile tall reveal"><img src="assets/images/oakley-rafter-lava.webp" alt="Oakley Rafter volcanic advertising concept" loading="lazy"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/esp-ltd-mh350fm.webp" alt="ESP LTD MH-350FM advertising composition" loading="lazy"><figcaption>Music Product Advertising</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/corvette-popout.webp" alt="Corvette burnout pop-out compositing treatment" loading="lazy"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/mercury-graphic.jpg" alt="Orange Mercury photograph and graphic interpretation" loading="lazy"><figcaption>Photo-to-Illustration Treatment</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/pinup-before-after.jpg" alt="Pinup automotive background transformation before and after" loading="lazy"><figcaption>Background &amp; Environmental Transformation</figcaption></figure>
+      </div>
+
+      <div class="before-after reveal">
+        <div class="before-after-head"><span>Creative Enhancement</span><span>Original capture → finished treatment</span></div>
+        <div class="before-after-grid">
+          <figure><img src="assets/images/le-reve-original.webp" alt="Original Le Rêve aerial performance photograph" loading="lazy"><figcaption>ORIGINAL</figcaption></figure>
+          <figure><img src="assets/images/le-reve-enhanced.webp" alt="Enhanced Le Rêve aerial performance photograph" loading="lazy"><figcaption>ENHANCED</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-block event-block">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div>
+        <p>Live performance, corporate events, audiences, and candid human interaction.</p>
+      </div>
+      <div class="mosaic events-mosaic">
+        <figure class="tile tall reveal"><img src="assets/images/le-reve-enhanced.webp" alt="Aerial performance over a water stage" loading="lazy"><figcaption>Live Performance</figcaption></figure>
+        <figure class="tile reveal"><img src="assets/images/event-audience.webp" alt="Corporate event audience under stage lighting" loading="lazy"><figcaption>Corporate Event</figcaption></figure>
+        <figure class="tile reveal"><img src="assets/images/event-outdoor.webp" alt="Outdoor corporate team event" loading="lazy"><figcaption>Team / Outdoor Event</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="portfolio-block wedding-block">
+      <div class="wedding-bg" aria-hidden="true"></div>
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">WEDDINGS &amp; PORTRAITURE</div><h2>Quiet details. Real connection.</h2></div>
+        <p>Romantic portraiture, storytelling details, and intimate moments without overworking the scene.</p>
+      </div>
+      <div class="mosaic wedding-mosaic">
+        <figure class="tile wide reveal"><img src="assets/images/bride-mirror.webp" alt="Bride reflected in a mirror" loading="lazy"><figcaption>Bridal Portrait</figcaption></figure>
+        <figure class="tile tall reveal"><img src="assets/images/wedding-rings.webp" alt="Wedding rings in front of deep red roses" loading="lazy"><figcaption>Wedding Detail</figcaption></figure>
+        <figure class="tile tall reveal"><img src="assets/images/wedding-couple.webp" alt="Wedding couple portrait against stained glass" loading="lazy"><figcaption>Wedding Portrait</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="portfolio-block auto-block">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">AUTOMOTIVE &amp; MOTORSPORTS</div><h2>Motion, metal, and attitude.</h2></div>
+        <p>Cars, racing, and the visual culture around them.</p>
+      </div>
+      <div class="auto-grid">
+        <figure class="tile john-force reveal"><img src="assets/images/john-force-funny-car.jpg" alt="John Force Castrol Funny Car racing alongside another Funny Car" loading="lazy"><figcaption>Funny Car / Track Action</figcaption></figure>
+        <figure class="tile ratrod reveal"><img src="assets/images/mercury-graphic.jpg" alt="Orange Mercury photograph paired with a graphic interpretation" loading="lazy"><figcaption>Automotive / Graphic Transformation</figcaption></figure>
+      </div>
+      <p class="small-source-note reveal">The Funny Car image is intentionally presented at a smaller size because the surviving source file is low resolution.</p>
+    </section>
+
+    <section class="portfolio-block nature-block">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">PLACES &amp; NATURE</div><h2>Weather, water, distance.</h2></div>
+        <p>Travel and landscape work shaped by timing, atmosphere, and the character of a place.</p>
+      </div>
+      <div class="nature-grid">
+        <figure class="tile reveal"><img src="assets/images/alaska-river.webp" alt="Long-exposure cascade through a mossy Alaska forest" loading="lazy"><figcaption>Alaska / Long Exposure</figcaption></figure>
+        <figure class="tile reveal"><img src="assets/images/glacier-calving.webp" alt="Glacier calving into icy water" loading="lazy"><figcaption>Alaska / Glacier Calving</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="capabilities reveal" aria-label="Capabilities">
+      <div class="capability">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M13 20h10l4-6h10l4 6h10a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6H13a6 6 0 0 1-6-6V26a6 6 0 0 1 6-6Z"/><circle cx="32" cy="37" r="11"/></svg>
+        <div><strong>30+ YEARS</strong><span>Professional Photography</span></div>
+      </div>
+      <div class="capability">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="9" y="10" width="46" height="34" rx="3"/><path d="M24 54h16M32 44v10"/></svg>
+        <div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div>
+      </div>
+      <div class="capability">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 44h20M25 51h14M20 27a12 12 0 1 1 24 0c0 7-6 9-7 14H27c-1-5-7-7-7-14Z"/></svg>
+        <div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div>
+      </div>
+      <div class="capability">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 8l7 7-9 9 5 5 9-9 6 6-9 9-5-5-8 8c-7 7-18 8-24 2s-5-17 2-24l8-8 6 6-8 8c-4 4-4 9-1 12s8 3 12-1l8-8-5-5 9-9Z"/></svg>
+        <div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div>
+      </div>
+    </section>
+
+    <section class="resume" id="resume">
+      <div class="resume-copy reveal">
+        <div class="eyebrow">RÉSUMÉ</div>
+        <h2>Commercial experience.<br>Production discipline.</h2>
+        <p>Photography, digital imaging, Photoshop, graphic design, e-commerce production, customer support, and team leadership — brought together in one visual-content career.</p>
+        <a class="button gold" href="assets/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">VIEW RÉSUMÉ PDF <span>↗</span></a>
+      </div>
+      <div class="resume-points reveal">
+        <div><strong>Current</strong><span>We The People Holsters — Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
+        <div><strong>Previously</strong><span>Canon technical support, professional photography, training, customer service, and commercial visual production</span></div>
+        <div><strong>Relocating</strong><span>Nashville / Murfreesboro, Tennessee — early November 2026</span></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="sunset" aria-hidden="true"><div class="mountain one"></div><div class="mountain two"></div></div>
+      <div class="contact-inner reveal">
+        <div class="eyebrow">LET'S CREATE SOMETHING GREAT</div>
+        <h2>Photography. Design. Production.</h2>
+        <p>Available for visual-content, product-imaging, graphics, and creative-production opportunities.</p>
+        <div class="contact-actions">
+          <a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a>
+          <a class="button" href="tel:+17578165955">757.816.5955</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <span>© 2026 Ken Israelson</span>
-    <a href="#top">Back to top ↑</a>
+    <span>Henderson, Nevada • Relocating to Tennessee</span>
   </footer>
-
-  <dialog id="lightbox" class="lightbox">
-    <button class="lightbox-close" aria-label="Close image">×</button>
-    <img src="" alt="">
-    <div class="lightbox-copy"><h3></h3><p></p></div>
-  </dialog>
-
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

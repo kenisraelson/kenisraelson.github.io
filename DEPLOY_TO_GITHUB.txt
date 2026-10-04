@@ -1,0 +1,10 @@
+KEN ISRAELSON PORTFOLIO — DEPLOYMENT
+
+1. Open your GitHub repository: kenisraelson/kenisraelson.github.io
+2. Replace the existing site files with the contents of this folder.
+3. Commit the changes to the main branch.
+4. GitHub Pages should publish automatically from main.
+
+Public resume: assets/Ken_Israelson_Resume_2026.pdf
+
+Note: The John Force image is intentionally shown as a smaller tile because the surviving source file is only 500 px wide.
