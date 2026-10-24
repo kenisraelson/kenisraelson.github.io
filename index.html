@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -92,7 +93,61 @@
   .shipshoot-logo-item { justify-content:flex-start; }
   .section-heading { gap:14px; }
 }
-</style></head>
+</style><style>
+/* 2026-10-24: Final homepage and closing-section layout correction. */
+.hero { display:flex; justify-content:center; padding:0; text-align:center; }
+.hero .hero-copy {
+  box-sizing:border-box; width:min(100% - 40px, 1120px); max-width:1120px;
+  margin:0 auto; padding:clamp(70px,8vw,118px) 0 clamp(72px,8vw,114px);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center;
+}
+.hero h1 {
+  width:100%; max-width:none; margin:0 auto;
+  font-family:"Arial Black","Montserrat","Segoe UI",Arial,sans-serif;
+  font-weight:800; font-size:clamp(27px,7vw,98px);
+  line-height:1.10; letter-spacing:-.025em; word-spacing:.12em;
+  text-align:center; text-wrap:unset;
+}
+.hero h1 .hero-line { display:inline-block; white-space:nowrap; }
+.hero .eyebrow { margin-inline:auto; text-align:center; }
+.hero .gold-rule { margin:clamp(22px,3vw,36px) auto; }
+.hero p { max-width:690px; margin:0 auto 26px; text-align:center; }
+.hero .hero-actions { width:100%; display:flex; justify-content:center; margin-top:14px; }
+.hero .hero-actions .button { justify-content:center; }
+/* Resume section: calm introductory column, four coherent experience points. */
+.resume { gap:clamp(28px,5vw,80px); grid-template-columns:minmax(0, .95fr) minmax(0, 1.05fr); align-items:center; }
+.resume-copy h2 { max-width:560px; }
+.resume-copy p { max-width:560px; }
+.resume-points > div { grid-template-columns:minmax(135px, 170px) minmax(0,1fr); gap:22px; align-items:start; }
+.resume-points strong { font-size:clamp(12px,1vw,14px); line-height:1.45; letter-spacing:.04em; }
+.resume-points span { font-size:clamp(14px,1.15vw,16px); line-height:1.55; }
+/* Final contact and footer are centered as a unified closing composition. */
+.contact { text-align:center; justify-content:center; }
+.contact .contact-inner { display:flex; flex-direction:column; align-items:center; text-align:center; }
+.contact .eyebrow { text-align:center; }
+.contact h2 { max-width:100%; text-align:center; }
+.contact p { max-width:760px; text-align:center; }
+.contact .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px; margin-top:26px; }
+.contact .contact-actions .button { justify-content:center; min-height:48px; }
+footer { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; text-align:center; font-size:12px; letter-spacing:.07em; padding:25px 20px 30px; }
+@media(max-width:980px) {
+ .resume { grid-template-columns:1fr; gap:38px; }
+ .resume-points > div { grid-template-columns:minmax(120px,170px) minmax(0,1fr); }
+}
+@media(max-width:620px) {
+ .hero .hero-copy { width:calc(100% - 28px); padding-block:58px 68px; }
+ .hero h1 { font-size:clamp(24px,6.9vw,43px); letter-spacing:-.03em; word-spacing:.06em; line-height:1.14; }
+ .hero .eyebrow { font-size:12px; letter-spacing:.07em; }
+ .hero .hero-actions .button { width:auto; min-width:188px; }
+ .resume-points > div { grid-template-columns:1fr; gap:6px; }
+ .contact .contact-actions { flex-direction:column; width:100%; }
+ .contact .contact-actions .button { width:min(100%,310px); justify-content:center; }
+ footer { font-size:11px; }
+}
+</style><style>/* Approved thin-line capabilities icons, 2026-10-24 */
+.capabilities .capability svg {fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;}
+.capabilities .capability svg path,.capabilities .capability svg circle,.capabilities .capability svg rect {fill:none;stroke:inherit;stroke-width:inherit;}</style></head>
 <body>
 <header class="site-header">
 <a aria-label="Ken Israelson home" class="brand" href="#top">
@@ -110,7 +165,7 @@
 <section class="hero">
 <div class="hero-copy reveal">
 <div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div>
-<h1>WHERE IDEAS<br/>BECOME REAL</h1>
+<h1><span class="hero-line">WHERE IDEAS</span><br/><span class="hero-line">BECOME REAL</span></h1>
 <div class="gold-rule"></div>
 <p>Transforming ideas into compelling visual experiences, from imaginative concepts and commercial photography to brand identities and advertising.</p>
 <div class="hero-actions">
@@ -216,34 +271,30 @@
 </section>
 <section aria-label="Capabilities" class="capabilities reveal">
 <div class="capability">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="M13 20h10l4-6h10l4 6h10a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6H13a6 6 0 0 1-6-6V26a6 6 0 0 1 6-6Z"></path><circle cx="32" cy="37" r="11"></circle></svg>
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><path d="M12 22h10l4-6h12l4 6h10a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5Z"></path><circle cx="32" cy="37" r="11"></circle><circle cx="32" cy="37" r="7"></circle></svg>
 <div><strong>30+ YEARS</strong><span>Professional Photography</span></div>
 </div>
 <div class="capability">
-<svg aria-hidden="true" viewbox="0 0 64 64"><rect height="34" rx="3" width="46" x="9" y="10"></rect><path d="M24 54h16M32 44v10"></path></svg>
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><rect height="35" rx="2.5" width="48" x="8" y="12"></rect><path d="M31 47v8M22 55h20M16 20h32v20H16zM21 36l9-9 7 6 4-4 5 7"></path><circle cx="43" cy="25" r="2.3"></circle></svg>
 <div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div>
 </div>
 <div class="capability">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="M22 44h20M25 51h14M20 27a12 12 0 1 1 24 0c0 7-6 9-7 14H27c-1-5-7-7-7-14Z"></path></svg>
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><path d="M25 44h14M27 49h10M32 53v2M24 36c-3-3-5-7-5-11a13 13 0 0 1 26 0c0 5-3 9-6 12l-2 5H27l-3-6Z M32 4v5M12 25h-5M52 25h5M17 10l4 4M47 10l-4 4"></path></svg>
 <div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div>
 </div>
 <div class="capability">
-<svg aria-hidden="true" viewbox="0 0 64 64"><path d="M38 8l7 7-9 9 5 5 9-9 6 6-9 9-5-5-8 8c-7 7-18 8-24 2s-5-17 2-24l8-8 6 6-8 8c-4 4-4 9-1 12s8 3 12-1l8-8-5-5 9-9Z"></path></svg>
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><g transform="rotate(45 32 32)"><path d="M17 12c-1 9-6 10-6 20s5 11 6 20M47 12c1 9 6 10 6 20s-5 11-6 20"></path><circle cx="32" cy="32" r="10"></circle><path d="M25 7v50M28.5 7v50M32 7v50M35.5 7v50M39 7v50"></path></g></svg>
 <div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div>
 </div>
 </section>
 <section class="resume" id="resume">
 <div class="resume-copy reveal">
 <div class="eyebrow">RESUME</div>
-<h2>Commercial experience.<br/>Production discipline.</h2>
-<p>Photography, digital imaging, Photoshop, graphic design, e-commerce production, customer support, and team leadership, brought together in one visual-content career.</p>
+<h2>Experience meets creativity.</h2>
+<p>Decades of professional photography, creative production, and visual problem-solving.</p>
 <a class="button gold" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">VIEW RESUME PDF <span>↗</span></a>
 </div>
-<div class="resume-points reveal">
-<div><strong>Recent</strong><span>We The People Holsters, Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
-<div><strong>Previously</strong><span>Canon technical support, professional photography, training, customer service, and commercial visual production</span></div>
-<div><strong>Relocating</strong><span>Nashville / Murfreesboro, Tennessee, early November 2026</span></div>
-</div>
+<div class="resume-points reveal"><div><strong>We The People Holsters</strong><span>Commercial advertising, product photography, graphic design, and digital imaging.</span></div><div><strong>Cashman Professional</strong><span>Weddings, conferences, entertainment, events, client collaboration, and photographer training.</span></div><div><strong>Canon</strong><span>EOS technical support, photographic education, and creative problem-solving.</span></div><div><strong>Sitel</strong><span>Team leadership, coaching, and production-minded workflows.</span></div></div>
 </section>
 <section class="contact" id="contact">
 <div aria-hidden="true" class="sunset"><div class="mountain one"></div><div class="mountain two"></div></div>
