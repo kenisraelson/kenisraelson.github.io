@@ -3,9 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ken Israelson — Visual Content / Product Imaging Specialist</title>
-  <meta name="description" content="Photography, product imaging, retouching, graphic design, and creative production by Ken Israelson." />
-<link rel="stylesheet" href="styles.css" />
+  <title>Ken Israelson — Creative Visualization, Photography & Graphic Design</title>
+  <meta name="description" content="Creative visualization, commercial photography, graphic design and advertising by Ken Israelson. Where ideas become real." />
+  <link rel="stylesheet" href="styles.css" />
+<style>
+.brand-showcase { padding-block: clamp(3rem, 6vw, 6rem); }
+.showcase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem); }
+.showcase-item { margin:0; min-width:0; }
+.showcase-item img { display:block;width:100%;height:auto;object-fit:contain;border-radius:10px; }
+.showcase-item img[src*="Extended_Transparent"] { background:#24272B; padding:clamp(1rem,2vw,2rem); box-sizing:border-box; }
+.showcase-item figcaption { padding-top:.75rem; font-size:.88rem; line-height:1.45; opacity:.8; }
+@media(max-width:760px){.showcase-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
   <header class="site-header">
@@ -24,15 +33,18 @@
   <main id="top">
     <section class="hero">
       <div class="hero-copy reveal">
-        <div class="eyebrow">PHOTOGRAPHY • DESIGN • VISUAL PRODUCTION</div>
-        <h1>Places. Products.<br>People. Ideas.</h1>
+        <div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div>
+        <h1>WHERE IDEAS<br>BECOME REAL.</h1>
         <div class="gold-rule"></div>
-        <p>Images built to sell, explain, and stay remembered — from product and e-commerce work to events, automotive, portraiture, and creative compositing.</p>
+        <p>Transforming ideas into compelling visual experiences—from imaginative concepts and commercial photography to brand identities and advertising.</p>
         <div class="hero-actions">
           <a class="button gold" href="#work">VIEW WORK <span>→</span></a>
-          <a class="button" href="assets/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">RESUME PDF <span>↗</span></a>
+          <a class="button" href="00Website_Finals/Ken_Israelson_Creative_Marketing_Designer.pdf" target="_blank" rel="noopener">RESUME PDF <span>↗</span></a>
         </div>
       </div>
+      <figure class="hero-image reveal">
+        <img src="assets/images/hero-product.webp" alt="Commercial holster product photograph on an industrial workbench" fetchpriority="high" />
+      </figure>
     </section>
 
     <section class="selected" id="work">
@@ -67,9 +79,42 @@
         <div class="eyebrow">ABOUT</div>
         <h2>Photographer.<br>Creator. Producer.</h2>
         <div class="gold-rule short"></div>
-        <p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Chesapeake, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture, and mobile corporate headshots.</p>
+        <p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture, and mobile corporate headshots.</p>
         <p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful — not just decorative.</p>
         <p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
+      </div>
+    </section>
+
+
+    <!-- Blink portfolio creative work: paths refer to files in root/00Website_Finals. -->
+    <section class="portfolio-block brand-showcase" id="brand-showcase" aria-labelledby="showcase-title">
+      <div class="section-heading reveal">
+        <div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div>
+        <p>Commercial photography, brand identity, and architectural concept visualization.</p>
+      </div>
+      <div class="showcase-grid">
+        <figure class="showcase-item reveal">
+          <img src="00Website_Finals/ShipShoot_Jewelry_Ad_v01.png" alt="Necklace advertising concept with Unforgettable typography" loading="lazy">
+          <figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption>
+        </figure>
+        <figure class="showcase-item reveal">
+          <img src="00Website_Finals/ShipShoot_Studios_Extended_Transparent.png" alt="ShipShoot Studios transparent extended brand identity with Ship Shoot Sell tagline" loading="lazy">
+          <figcaption>ShipShoot Studios · Original brand identity and campaign lockup</figcaption>
+        </figure>
+      </div>
+      <div class="section-heading reveal" style="margin-top:clamp(2rem,4vw,4rem)">
+        <div><div class="eyebrow">ARCHITECTURAL CONCEPT VISUALIZATION</div><h2>See the possibilities before you build.</h2></div>
+        <p>Residential screened-patio design concept, developed from a property photograph and presented through architectural illustration and client-facing visual communication.</p>
+      </div>
+      <div class="showcase-grid">
+        <figure class="showcase-item reveal">
+          <img src="00Website_Finals/APPROVED_LOCKED_architectural_concept_light_roof.png" alt="Approved screened patio architectural concept visualization" loading="lazy">
+          <figcaption>Screened Patio Concept · Architectural illustration and visual design</figcaption>
+        </figure>
+        <figure class="showcase-item reveal">
+          <img src="00Website_Finals/tech_spec_sheet_lightweight_aluminum_roof.png" alt="Screened patio design concept technical presentation sheet with design callouts" loading="lazy">
+          <figcaption>Concept Presentation · Proposed features, materials, and visual specifications</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -88,34 +133,23 @@
     <section class="portfolio-block creative-block">
       <div class="section-heading reveal">
         <div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div>
-        <p>Campaign concepts, visual treatments, compositing, and graphic transformation.</p>
+        <p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p>
       </div>
       <div class="mosaic creative-mosaic">
         <figure class="tile tall reveal"><img src="assets/images/oakley-rafter-lava.webp" alt="Oakley Rafter volcanic advertising concept" loading="lazy"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
         <figure class="tile wide reveal"><img src="assets/images/esp-ltd-mh350fm.webp" alt="ESP LTD MH-350FM advertising composition" loading="lazy"><figcaption>Music Product Advertising</figcaption></figure>
         <figure class="tile wide reveal"><img src="assets/images/corvette-popout.webp" alt="Corvette burnout pop-out compositing treatment" loading="lazy"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
-        <figure class="tile wide full-span reveal"><img src="assets/images/pinup-before-after.jpg" alt="Pinup automotive background transformation before and after" loading="lazy"><figcaption>Background &amp; Environmental Transformation</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/mercury-graphic.jpg" alt="Orange Mercury photograph and graphic interpretation" loading="lazy"><figcaption>Photo-to-Illustration Treatment</figcaption></figure>
+        <figure class="tile wide reveal"><img src="assets/images/pinup-before-after.jpg" alt="Pinup automotive background transformation before and after" loading="lazy"><figcaption>Background &amp; Environmental Transformation</figcaption></figure>
       </div>
-    </section>
 
-    <section class="portfolio-block interface-block">
-      <div class="section-heading reveal">
-        <div>
-          <div class="eyebrow">DIGITAL INTERFACE DESIGN</div>
-          <h2>Visual systems built as complete environments.</h2>
+      <div class="before-after reveal">
+        <div class="before-after-head"><span>Creative Enhancement</span><span>Original capture → finished treatment</span></div>
+        <div class="before-after-grid">
+          <figure><img src="assets/images/le-reve-original.webp" alt="Original Le Rêve aerial performance photograph" loading="lazy"><figcaption>ORIGINAL</figcaption></figure>
+          <figure><img src="assets/images/le-reve-enhanced.webp" alt="Enhanced Le Rêve aerial performance photograph" loading="lazy"><figcaption>ENHANCED</figcaption></figure>
         </div>
-        <p>Custom Rainmeter suites, themed desktop environments, and cohesive visual systems.</p>
       </div>
-
-      <figure class="interface-feature reveal">
-        <img src="assets/images/Worlds Beyond Mockup.png"
-             alt="Worlds Beyond desktop interface concept showing an illustrated science-fiction environment, launcher, clock, and system meters"
-             loading="lazy">
-        <figcaption>
-          <strong>Worlds Beyond</strong>
-          <span>Concept interface design, desktop environment, launcher, system meters, and unified visual theme.</span>
-        </figcaption>
-      </figure>
     </section>
 
     <section class="portfolio-block event-block">
@@ -157,11 +191,10 @@
 
     <section class="portfolio-block nature-block">
       <div class="section-heading reveal">
-        <div><div class="eyebrow">PLACES &amp; NATURE</div></div>
+        <div><div class="eyebrow">PLACES &amp; NATURE</div><h2>Weather, water, distance.</h2></div>
         <p>Travel and landscape work shaped by timing, atmosphere, and the character of a place.</p>
       </div>
       <div class="nature-grid">
-        <figure class="tile nature-hero reveal"><img src="assets/images/sedona-panorama-sunny-final.jpg" alt="Wide sunlit panorama of Sedona red rock country" loading="lazy"><figcaption>Sedona / Arizona</figcaption></figure>
         <figure class="tile reveal"><img src="assets/images/alaska-river.webp" alt="Long-exposure cascade through a mossy Alaska forest" loading="lazy"><figcaption>Alaska / Long Exposure</figcaption></figure>
         <figure class="tile reveal"><img src="assets/images/glacier-calving.webp" alt="Glacier calving into icy water" loading="lazy"><figcaption>Alaska / Glacier Calving</figcaption></figure>
       </div>
@@ -181,11 +214,8 @@
         <div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div>
       </div>
       <div class="capability">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <rect x="9" y="11" width="46" height="34" rx="3"/>
-          <path d="M17 20h12M17 27h18M17 34h10M41 20h6M41 27h6M41 34h6M24 54h16M32 45v9"/>
-        </svg>
-        <div><strong>DIGITAL INTERFACE DESIGN</strong><span>Rainmeter suites • Desktop environments • Visual systems</span></div>
+        <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M38 8l7 7-9 9 5 5 9-9 6 6-9 9-5-5-8 8c-7 7-18 8-24 2s-5-17 2-24l8-8 6 6-8 8c-4 4-4 9-1 12s8 3 12-1l8-8-5-5 9-9Z"/></svg>
+        <div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div>
       </div>
     </section>
 
@@ -194,27 +224,24 @@
         <div class="eyebrow">RESUME</div>
         <h2>Commercial experience.<br>Production discipline.</h2>
         <p>Photography, digital imaging, Photoshop, graphic design, e-commerce production, customer support, and team leadership — brought together in one visual-content career.</p>
-        <a class="button gold" href="assets/Ken_Israelson_Resume_2026.pdf" target="_blank" rel="noopener">VIEW RESUME PDF <span>↗</span></a>
+        <a class="button gold" href="00Website_Finals/Ken_Israelson_Creative_Marketing_Designer.pdf" target="_blank" rel="noopener">VIEW RESUME PDF <span>↗</span></a>
       </div>
       <div class="resume-points reveal">
-        <div><strong>Current</strong><span>We The People Holsters — Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
+        <div><strong>Recent</strong><span>We The People Holsters — Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
         <div><strong>Previously</strong><span>Canon technical support, professional photography, training, customer service, and commercial visual production</span></div>
         <div><strong>Relocating</strong><span>Nashville / Murfreesboro, Tennessee — early November 2026</span></div>
       </div>
     </section>
 
     <section class="contact" id="contact">
+      <div class="sunset" aria-hidden="true"><div class="mountain one"></div><div class="mountain two"></div></div>
       <div class="contact-inner reveal">
-        <div class="eyebrow">CONTACT</div>
-        <h2>Let’s make something<br>worth looking at.</h2>
-
-        <div class="contact-details">
-          <a class="contact-email" href="mailto:kenimail@yahoo.com">kenimail@yahoo.com</a>
-          <a class="contact-phone" href="tel:+17578165955">757.816.5955</a>
-
-          <p class="contact-location">Henderson, Nevada</p>
-          <p class="contact-relocation">Relocating to the Nashville / Murfreesboro,<br>
-          Tennessee area in early November 2026</p>
+        <div class="eyebrow">LET'S CREATE SOMETHING GREAT</div>
+        <h2>Photography. Design. Production.</h2>
+        <p>Available for visual-content, product-imaging, graphics, and creative-production opportunities.</p>
+        <div class="contact-actions">
+          <a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a>
+          <a class="button" href="tel:+17578165955">757.816.5955</a>
         </div>
       </div>
     </section>
