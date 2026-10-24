@@ -28,6 +28,21 @@
 .events-mosaic .tile img { width:100%;height:auto;object-fit:contain; }
 .selected .feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 @media (max-width:760px) { .product-mosaic,.events-mosaic,.selected .feature-grid {grid-template-columns:1fr;} }
+</style><style>
+/* Blink portfolio final editorial refinements */
+.hero { min-height:auto; padding-bottom: clamp(3rem,6vw,5.5rem); }
+.hero-copy { max-width:980px; }
+.hero h1 { font-family: "Arial Black", "Montserrat", "Segoe UI", Arial, sans-serif; font-weight: 800; font-size:clamp(3.3rem, 7.2vw, 7.8rem); letter-spacing:-.065em; line-height:.98; text-transform:uppercase; text-wrap:balance; }
+.hero-square-period { display:inline-block; width:.115em; height:.115em; background:currentColor; margin-left:.035em; vertical-align:baseline; transform:translateY(-.055em); }
+.hero-actions { margin-top:1.85rem; }
+.hero .eyebrow { letter-spacing:.19em; }
+.brand-showcase { scroll-margin-top:6rem; }
+.lab-heading { margin-top:clamp(3rem,6vw,6rem); }
+.designlab-grid { grid-template-columns:1fr; }
+.designlab-grid img { width:100%; height:auto; max-height:none; object-fit:contain; }
+.product-holster img { max-height:330px!important; width:100%; object-fit:contain; background:#151718; }
+.omnia-event img { max-height:560px; object-fit:contain; }
+@media(max-width:760px) { .hero h1 { font-size:clamp(2.8rem,10vw,5rem); letter-spacing:-.055em; } .hero-copy {padding-inline:0;} }
 </style></head>
 <body>
 <header class="site-header">
@@ -36,7 +51,7 @@
 <span class="brand-sub">Visual Content / Product Imaging Specialist</span>
 </a>
 <nav aria-label="Primary navigation">
-<a href="#work">WORK</a>
+<a href="#brand-showcase">WORK</a>
 <a href="#about">ABOUT</a>
 <a href="#resume">RESUME</a>
 <a href="#contact">CONTACT</a>
@@ -46,36 +61,16 @@
 <section class="hero">
 <div class="hero-copy reveal">
 <div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div>
-<h1>WHERE IDEAS<br/>BECOME REAL.</h1>
+<h1>WHERE IDEAS<br/>BECOME REAL<span aria-label="period" class="hero-square-period"></span></h1>
 <div class="gold-rule"></div>
 <p>Transforming ideas into compelling visual experiences—from imaginative concepts and commercial photography to brand identities and advertising.</p>
 <div class="hero-actions">
-<a class="button gold" href="#work">VIEW WORK <span>→</span></a>
+
 <a class="button" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">RESUME PDF <span>↗</span></a>
 </div>
 </div>
-
 </section>
-<section class="selected" id="work">
-<div class="section-heading reveal">
-<div>
-<div class="eyebrow">SELECTED WORK</div>
-<h2>Commercial, polished, real-world.</h2>
-</div>
-<p>Photography and visual production across products, people, places, and creative campaigns.</p>
-</div>
-<div class="feature-grid">
-<article class="feature-card reveal">
-<div class="media"><img alt="Cinematic NVMe enclosure product photograph" src="assets/images/nvme-enclosure.webp"/></div>
-<div class="card-copy"><strong>PRODUCT &amp; E-COMMERCE</strong><span>Clean. Detailed. Effective.</span></div>
-</article>
 
-<article class="feature-card reveal">
-<div class="media"><img alt="ESP LTD MH-350FM guitar advertising layout" src="assets/images/esp-ltd-mh350fm.webp"/></div>
-<div class="card-copy"><strong>MUSIC &amp; CREATIVE</strong><span>Gear, graphics, and visual storytelling.</span></div>
-</article>
-</div>
-</section>
 <section class="about" id="about">
 <div class="about-photo reveal">
 <img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"/>
@@ -86,11 +81,9 @@
 <div class="gold-rule short"></div>
 <p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture, and mobile corporate headshots.</p>
 <p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful — not just decorative.</p>
-<p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
+<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events—assignments that demand adaptability, precise timing, and strong visual storytelling.</p><p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
 </div>
-</section>
- Portfolio creative work: filenames refer to repository root. 
-<section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
+</section><section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
 <div class="section-heading reveal">
 <div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div>
 <p>Commercial photography, brand identity, and architectural concept visualization.</p>
@@ -104,7 +97,7 @@
 <img alt="ShipShoot Studios transparent extended brand identity with Ship Shoot Sell tagline" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"/>
 <figcaption>ShipShoot Studios · Original brand identity and campaign lockup</figcaption>
 </figure>
-</div>
+</div><div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE CONCEPT &amp; BRAND PRESENTATION</div><h2>The Design Lab.</h2></div><p>Two visual treatments exploring an imaginative studio identity, architectural concepts, and creative visualization.</p></div><div class="showcase-grid designlab-grid"><figure class="showcase-item reveal"><img alt="The Design Lab concept banner with model house and creative laboratory imagery" loading="lazy" src="The Design Lab_ Ideas Become Reality.png"/><figcaption>The Design Lab · Concept identity and visualization</figcaption></figure><figure class="showcase-item reveal"><img alt="The Design Lab at Dusk cinematic studio visualization" loading="lazy" src="The Design Lab at Dusk.png"/><figcaption>The Design Lab at Dusk · Environmental concept treatment</figcaption></figure></div>
 <div class="section-heading reveal" style="margin-top:clamp(2rem,4vw,4rem)">
 <div><div class="eyebrow">ARCHITECTURAL CONCEPT VISUALIZATION</div><h2>See the possibilities before you build.</h2></div>
 <p>Residential screened-patio design concept, developed from a property photograph and presented through architectural illustration and client-facing visual communication.</p>
@@ -126,9 +119,8 @@
 <p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p>
 </div>
 <div class="mosaic product-mosaic">
-
 <figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"/><figcaption>Tabletop / Technology</figcaption></figure>
-<figure class="tile reveal"><img alt="Jewelry photographed on glossy glass" loading="lazy" src="assets/images/jewelry-glass.webp"/><figcaption>Jewelry / Glass</figcaption></figure>
+<figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'" src="hero-product.JPG"/><figcaption>Product / Lifestyle Studio</figcaption></figure>
 </div>
 </section>
 <section class="portfolio-block creative-block">
@@ -140,10 +132,9 @@
 <figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"/><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
 <figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"/><figcaption>Music Product Advertising</figcaption></figure>
 <figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"/><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
-<figure class="tile wide reveal"><img alt="Orange Mercury photograph and graphic interpretation" loading="lazy" src="assets/images/mercury-graphic.jpg"/><figcaption>Photo-to-Illustration Treatment</figcaption></figure>
-<figure class="tile wide reveal"><img alt="Pinup automotive background transformation before and after" loading="lazy" src="assets/images/pinup-before-after.jpg"/><figcaption>Background &amp; Environmental Transformation</figcaption></figure>
-</div>
 
+
+</div>
 </section>
 <section class="portfolio-block event-block">
 <div class="section-heading reveal">
@@ -152,9 +143,8 @@
 </div>
 <div class="mosaic events-mosaic">
 <figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"/><figcaption>Live Performance</figcaption></figure>
-
 <figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"/><figcaption>Team / Outdoor Event</figcaption></figure>
-</div>
+<figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"/><figcaption>OMNIA / Live Entertainment</figcaption></figure></div>
 </section>
 <section class="portfolio-block wedding-block">
 <div aria-hidden="true" class="wedding-bg"></div>
@@ -179,7 +169,6 @@
 </div>
 <p class="small-source-note reveal">The Funny Car image is intentionally presented at a smaller size because the surviving source file is low resolution.</p>
 </section>
-
 <section aria-label="Capabilities" class="capabilities reveal">
 <div class="capability">
 <svg aria-hidden="true" viewbox="0 0 64 64"><path d="M13 20h10l4-6h10l4 6h10a6 6 0 0 1 6 6v22a6 6 0 0 1-6 6H13a6 6 0 0 1-6-6V26a6 6 0 0 1 6-6Z"></path><circle cx="32" cy="37" r="11"></circle></svg>
