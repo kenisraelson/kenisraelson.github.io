@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Ken Israelson — Creative Visualization, Photography &amp; Graphic Design</title>
+<title>Ken Israelson, Creative Visualization, Photography &amp; Graphic Design</title>
 <meta content="Creative visualization, commercial photography, graphic design and advertising by Ken Israelson. Where ideas become real." name="description"/>
 <link href="styles.css" rel="stylesheet"/>
 <style>
@@ -53,7 +52,47 @@
   max-width: 100%;
 }
 </style>
-</head>
+<style>
+/* Final editorial and typography pass, 2026-10-24 */
+/* Center the entire introduction, without stretching the words unnaturally. */
+.hero { display:flex; justify-content:center; }
+.hero-copy {
+  width:min(100% - 48px, 850px);
+  max-width:850px;
+  min-height:0;
+  margin:0 auto;
+  padding:clamp(56px,7vw,105px) 0 clamp(62px,7vw,108px);
+  align-items:stretch;
+}
+.hero h1 { max-width:100%; }
+.hero-actions { width:100%; justify-content:center; }
+/* Bring category labels forward, and restore readable supporting labels. */
+.eyebrow { font-size:clamp(13px,1.15vw,16px); letter-spacing:.15em; line-height:1.5; }
+.hero .eyebrow { font-size:clamp(14px,1.28vw,17px); letter-spacing:.11em; }
+.section-heading h2 { font-size:clamp(24px,2.2vw,36px); line-height:1.13; }
+.section-heading p { font-size:clamp(12.5px,1.02vw,14px); line-height:1.55; }
+.showcase-item figcaption { font-size:clamp(13px,1.04vw,15px); opacity:.94; line-height:1.5; }
+.tile figcaption { font-size:clamp(13px,1.02vw,15px); letter-spacing:.055em; }
+.capability strong { font-size:13px; }
+.capability span { font-size:13px; }
+/* Make the two Design Lab treatments the same grid size as the patio pair. */
+.designlab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.designlab-grid img { width:100%; height:auto; max-height:none; object-fit:contain; }
+/* Use the unused vertical space beside the tall jewelry advertisement. */
+.brand-showcase > .showcase-grid:first-of-type { align-items:stretch; }
+.shipshoot-logo-item {
+  display:flex; flex-direction:column; justify-content:center;
+}
+.shipshoot-logo-item img { width:100%; height:auto; object-fit:contain; }
+.shipshoot-logo-item figcaption { align-self:stretch; }
+@media(max-width:760px) {
+  .hero-copy { width:calc(100% - 42px); padding-block:64px 72px; }
+  .hero h1 { font-size:clamp(2.7rem,10vw,5rem); }
+  .designlab-grid { grid-template-columns:1fr; }
+  .shipshoot-logo-item { justify-content:flex-start; }
+  .section-heading { gap:14px; }
+}
+</style></head>
 <body>
 <header class="site-header">
 <a aria-label="Ken Israelson home" class="brand" href="#top">
@@ -75,12 +114,10 @@
 <div class="gold-rule"></div>
 <p>Transforming ideas into compelling visual experiences, from imaginative concepts and commercial photography to brand identities and advertising.</p>
 <div class="hero-actions">
-
 <a class="button" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">RESUME PDF <span>↗</span></a>
 </div>
 </div>
 </section>
-
 <section class="about" id="about">
 <div class="about-photo reveal">
 <img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"/>
@@ -89,9 +126,9 @@
 <div class="eyebrow">ABOUT</div>
 <h2>Photographer.<br/>Creator. Producer.</h2>
 <div class="gold-rule short"></div>
-<p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture, and mobile corporate headshots.</p>
-<p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful — not just decorative.</p>
-<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events—assignments that demand adaptability, precise timing, and strong visual storytelling.</p><p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
+<p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture.</p>
+<p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful, not just decorative.</p>
+<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events, assignments that demand adaptability, precise timing, and strong visual storytelling.</p><p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
 </div>
 </section><section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
 <div class="section-heading reveal">
@@ -103,7 +140,7 @@
 <img alt="Necklace advertising concept with Unforgettable typography" loading="lazy" src="ShipShoot_Jewelry_Ad_v01.png"/>
 <figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption>
 </figure>
-<figure class="showcase-item reveal">
+<figure class="showcase-item reveal shipshoot-logo-item">
 <img alt="ShipShoot Studios transparent extended brand identity with Ship Shoot Sell tagline" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"/>
 <figcaption>ShipShoot Studios · Original brand identity and campaign lockup</figcaption>
 </figure>
@@ -142,8 +179,6 @@
 <figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"/><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
 <figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"/><figcaption>Music Product Advertising</figcaption></figure>
 <figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"/><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
-
-
 </div>
 </section>
 <section class="portfolio-block event-block">
@@ -201,13 +236,13 @@
 <div class="resume-copy reveal">
 <div class="eyebrow">RESUME</div>
 <h2>Commercial experience.<br/>Production discipline.</h2>
-<p>Photography, digital imaging, Photoshop, graphic design, e-commerce production, customer support, and team leadership — brought together in one visual-content career.</p>
+<p>Photography, digital imaging, Photoshop, graphic design, e-commerce production, customer support, and team leadership, brought together in one visual-content career.</p>
 <a class="button gold" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">VIEW RESUME PDF <span>↗</span></a>
 </div>
 <div class="resume-points reveal">
-<div><strong>Recent</strong><span>We The People Holsters — Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
+<div><strong>Recent</strong><span>We The People Holsters, Graphic Artist / Product Photographer / Digital Imaging Specialist</span></div>
 <div><strong>Previously</strong><span>Canon technical support, professional photography, training, customer service, and commercial visual production</span></div>
-<div><strong>Relocating</strong><span>Nashville / Murfreesboro, Tennessee — early November 2026</span></div>
+<div><strong>Relocating</strong><span>Nashville / Murfreesboro, Tennessee, early November 2026</span></div>
 </div>
 </section>
 <section class="contact" id="contact">
