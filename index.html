@@ -211,6 +211,36 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
   padding: 10px 6px !important;
 }
 </style>
+
+<style>
+/* Final surgical cleanup: equal-height, uncropped product photos. */
+.product-mosaic > .tile {
+  min-height: 0 !important;
+  height: auto !important;
+}
+.product-mosaic > .tile img,
+.product-mosaic > .product-holster img {
+  display: block !important;
+  width: 100% !important;
+  height: clamp(220px, 25vw, 330px) !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+/* No enclosing border or dark box behind the holster photograph. */
+.product-mosaic > .product-holster {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.product-mosaic > .product-holster img { background: transparent !important; }
+/* Remove the circular sunset ornament on the right of the closing area. */
+.contact {
+  background: linear-gradient(115deg,#090909 0%,#0b0b0a 55%,#0e0d0c 100%) !important;
+}
+.contact > .sunset { display:none !important; }
+</style>
 </head>
 <body>
 <header class="site-header">
