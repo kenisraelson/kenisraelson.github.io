@@ -147,7 +147,71 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
 }
 </style><style>/* Approved thin-line capabilities icons, 2026-10-24 */
 .capabilities .capability svg {fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;}
-.capabilities .capability svg path,.capabilities .capability svg circle,.capabilities .capability svg rect {fill:none;stroke:inherit;stroke-width:inherit;}</style></head>
+.capabilities .capability svg path,.capabilities .capability svg circle,.capabilities .capability svg rect {fill:none;stroke:inherit;stroke-width:inherit;}</style><style>
+/* October 24: automotive pair, compact equal-height displays, no cropping */
+.auto-block .auto-grid {
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  align-items:start !important;
+  gap:clamp(12px,2vw,26px) !important;
+}
+.auto-block .auto-grid > .tile {
+  display:flex !important;
+  flex-direction:column !important;
+  margin:0 !important;
+  padding:0 !important;
+  min-width:0 !important;
+  height:auto !important;
+  min-height:0 !important;
+  align-self:start !important;
+}
+.auto-block .auto-grid > .tile img {
+  display:block !important;
+  width:100% !important;
+  height:clamp(190px,23vw,335px) !important;
+  max-height:335px !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  flex:none !important;
+}
+.auto-block .auto-grid > .tile figcaption {
+  margin:0 !important;
+  min-height:0 !important;
+  padding:10px 6px 0 !important;
+}
+@media(max-width:700px) {
+  .auto-block .auto-grid {grid-template-columns:1fr !important;gap:24px !important;}
+  .auto-block .auto-grid > .tile img {height:auto !important;max-height:335px !important;}
+}
+</style><style>
+/* Holster-on-bench card: fit its frame to the image, no crop or extra vertical space. */
+.product-mosaic { align-items: start !important; }
+.product-mosaic > .product-holster {
+  display: flex !important;
+  flex-direction: column !important;
+  align-self: start !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden;
+}
+.product-mosaic > .product-holster img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 330px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  flex: 0 0 auto !important;
+}
+.product-mosaic > .product-holster figcaption {
+  margin: 0 !important;
+  min-height: 0 !important;
+  padding: 10px 6px !important;
+}
+</style>
+</head>
 <body>
 <header class="site-header">
 <a aria-label="Ken Israelson home" class="brand" href="#top">
@@ -299,8 +363,8 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
 <section class="contact" id="contact">
 <div aria-hidden="true" class="sunset"><div class="mountain one"></div><div class="mountain two"></div></div>
 <div class="contact-inner reveal">
-<div class="eyebrow">LET'S CREATE SOMETHING GREAT</div>
-<h2>Photography. Design. Production.</h2>
+<div class="eyebrow">READY TO CREATE SOMETHING MEMORABLE?</div>
+<h2>Let's make something worth looking at.</h2>
 <p>Available for visual-content, product-imaging, graphics, and creative-production opportunities.</p>
 <div class="contact-actions">
 <a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a>
