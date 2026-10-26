@@ -294,20 +294,73 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
 <figcaption>ShipShoot Studios · Original brand identity and campaign lockup</figcaption>
 </figure>
 </div><div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE CONCEPT &amp; BRAND PRESENTATION</div><h2>The Design Lab.</h2></div><p>Two visual treatments exploring an imaginative studio identity, architectural concepts, and creative visualization.</p></div><div class="showcase-grid designlab-grid"><figure class="showcase-item reveal"><img alt="The Design Lab concept banner with model house and creative laboratory imagery" loading="lazy" src="The Design Lab_ Ideas Become Reality.png"/><figcaption>The Design Lab · Concept identity and visualization</figcaption></figure><figure class="showcase-item reveal"><img alt="The Design Lab at Dusk cinematic studio visualization" loading="lazy" src="The Design Lab at Dusk.png"/><figcaption>The Design Lab at Dusk · Environmental concept treatment</figcaption></figure></div>
-<div class="section-heading reveal" style="margin-top:clamp(2rem,4vw,4rem)">
-<div><div class="eyebrow">ARCHITECTURAL CONCEPT VISUALIZATION</div><h2>See the possibilities before you build.</h2></div>
-<p>Residential screened-patio design concept, developed from a property photograph and presented through architectural illustration and client-facing visual communication.</p>
-</div>
-<div class="showcase-grid">
-<figure class="showcase-item reveal">
-<img alt="Approved screened patio architectural concept visualization" loading="lazy" src="APPROVED_LOCKED_architectural_concept_light_roof.png"/>
-<figcaption>Screened Patio Concept · Architectural illustration and visual design</figcaption>
-</figure>
-<figure class="showcase-item reveal">
-<img alt="Screened patio design concept technical presentation sheet with design callouts" loading="lazy" src="tech_spec_sheet_lightweight_aluminum_roof.png"/>
-<figcaption>Concept Presentation · Proposed features, materials, and visual specifications</figcaption>
-</figure>
-</div>
+<!-- THE DESIGN LAB · patio transformation component (paste inside Design Lab section) -->
+<section class="dl-patio" aria-labelledby="dl-patio-heading">
+  <style>
+    .dl-patio{color:inherit;max-width:1100px;margin:2.5rem auto;font-family:inherit}
+    .dl-patio h3{font-size:clamp(1.35rem,3vw,2rem);letter-spacing:.035em;margin:0 0 .4rem}
+    .dl-patio p{line-height:1.6;opacity:.8;margin:0 0 1.25rem;max-width:64ch}
+    .dl-patio-visual{position:relative;aspect-ratio:1670/940;overflow:hidden;border-radius:12px;background:#222}
+    .dl-patio video,.dl-patio .dl-compare,.dl-patio .dl-compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .dl-patio video{display:block}
+    .dl-patio .dl-compare{display:none;user-select:none;touch-action:pan-y}
+    .dl-patio .dl-compare.active{display:block}
+    .dl-patio .dl-compare img{pointer-events:none}
+    .dl-patio .dl-after{clip-path:inset(0 0 0 50%)}
+    .dl-patio .dl-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;box-shadow:0 0 3px #222;transform:translateX(-50%);pointer-events:none}
+    .dl-patio .dl-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#f09b50;color:#141414;border:2px solid white;border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-weight:800;pointer-events:none}
+    .dl-patio .dl-tag{position:absolute;top:12px;background:rgba(15,15,15,.72);color:white;padding:5px 10px;border-radius:4px;letter-spacing:.12em;font-size:.72rem;pointer-events:none}
+    .dl-patio .dl-before-tag{left:12px}.dl-patio .dl-after-tag{right:12px}
+    .dl-patio input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+    .dl-patio .dl-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.85rem}
+    .dl-patio button{background:transparent;color:inherit;border:1px solid currentColor;border-radius:5px;padding:.6rem .9rem;cursor:pointer;font:inherit}
+    .dl-patio button[aria-pressed=true]{background:#f09b50;color:#161616;border-color:#f09b50}
+    .dl-patio button:focus-visible,.dl-patio input:focus-visible{outline:3px solid #f09b50;outline-offset:3px}
+    .dl-patio .dl-hint{font-size:.85rem;opacity:.72}
+  </style>
+  <h3 id="dl-patio-heading">FROM CONCEPT TO REALITY</h3>
+  <p>Architectural visualization · AI-assisted image development · compositing and keyframed animation</p>
+  <div class="dl-patio-visual">
+    <video muted playsinline preload="metadata" poster="patio-after.jpg" aria-label="Open patio transforms into a furnished screened enclosure">
+      <source src="patio-transformation.mp4" type="video/mp4">
+      Your browser does not support this video.
+    </video>
+    <div class="dl-compare" aria-label="Compare the open patio before and the enclosed patio after">
+      <img src="patio-before.jpg" alt="Before: clean open patio" loading="lazy">
+      <img src="patio-after.jpg" alt="After: furnished screened enclosure" class="dl-after" loading="lazy">
+      <span class="dl-tag dl-before-tag">BEFORE</span><span class="dl-tag dl-after-tag">AFTER</span>
+      <div class="dl-divider"></div><div class="dl-grip" aria-hidden="true">↔</div>
+      <input type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare before and after">
+    </div>
+  </div>
+  <div class="dl-controls">
+    <button type="button" class="dl-replay">↻ Replay transformation</button>
+    <button type="button" class="dl-toggle" aria-pressed="false">⇆ Compare before / after</button>
+    <span class="dl-hint">Play once, then drag to explore the result.</span>
+  </div>
+  <script>
+    (()=>{
+      const section=document.currentScript.closest('.dl-patio');
+      if(section.dataset.ready)return;section.dataset.ready='1';
+      const video=section.querySelector('video'),box=section.querySelector('.dl-compare');
+      const slider=box.querySelector('input'),after=box.querySelector('.dl-after');
+      const divider=box.querySelector('.dl-divider'),grip=box.querySelector('.dl-grip');
+      const replay=section.querySelector('.dl-replay'),toggle=section.querySelector('.dl-toggle');
+      let started=false,comparing=false;
+      function setSplit(){const x=Number(slider.value);after.style.clipPath=`inset(0 0 0 ${x}%)`;divider.style.left=`${x}%`;grip.style.left=`${x}%`;}
+      function compare(on){comparing=on;box.classList.toggle('active',on);video.style.visibility=on?'hidden':'visible';toggle.setAttribute('aria-pressed',String(on));toggle.textContent=on?'▶ Back to video':'⇆ Compare before / after';if(on)video.pause();else if(video.ended){try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}}}
+      function play(){compare(false);started=true;video.currentTime=0;video.play().catch(()=>{compare(true);});}
+      slider.addEventListener('input',setSplit);setSplit();
+      replay.addEventListener('click',play);
+      toggle.addEventListener('click',()=>compare(!comparing));
+      video.addEventListener('ended',()=>{try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}video.pause();});
+      if('IntersectionObserver' in window){
+        const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting && e.intersectionRatio>=.55)&&!started){started=true;io.disconnect();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){compare(true);slider.value=0;setSplit();}else video.play().catch(()=>compare(true));}},{threshold:[0,.55]});io.observe(section);
+      }else{compare(true);}
+    })();
+  </script>
+</section>
+
 </section>
 <section class="portfolio-block product-block">
 <div class="section-heading reveal">
