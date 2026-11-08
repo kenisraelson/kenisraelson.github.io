@@ -1,0 +1,95 @@
+/* Portfolio image presentation corrections — 2026-11-08
+   Include after the existing styles and inline <style> elements.
+   Preserve entire photograph, collapse empty card space, disable zoom.
+*/
+
+/* End the hover enlargement on every card and feature. */
+body .feature-card .media img,
+body .tile img,
+body .interface-feature img,
+body .showcase-item img,
+body .feature-card:hover .media img,
+body .tile:hover img,
+body .interface-feature:hover img,
+body .showcase-item:hover img {
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Gallery tiles should be only as tall as their photo and caption. */
+body .portfolio-block .mosaic,
+body .portfolio-block .auto-grid,
+body .brand-showcase .showcase-grid {
+  align-items: start !important;
+}
+body .portfolio-block .mosaic .tile,
+body .portfolio-block .auto-grid .tile,
+body .portfolio-block .mosaic .tile.tall,
+body .portfolio-block .mosaic .tile.wide,
+body .portfolio-block .mosaic .tile.full-span,
+body .portfolio-block .auto-grid .tile.tall,
+body .portfolio-block .auto-grid .tile.wide {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: auto !important;
+  grid-row: auto !important;
+  overflow: visible !important;
+  align-self: start !important;
+}
+body .portfolio-block .mosaic .tile img,
+body .portfolio-block .auto-grid .tile img,
+body .portfolio-block .product-mosaic > .tile img,
+body .portfolio-block .creative-mosaic > .tile img,
+body .portfolio-block .events-mosaic > .tile img,
+body .portfolio-block .wedding-mosaic > .tile img,
+body .portfolio-block .auto-grid > .tile img,
+body .brand-showcase .showcase-item img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+/* Place captions after images instead of overlaid on the bottom. */
+body .portfolio-block .mosaic .tile figcaption,
+body .portfolio-block .auto-grid .tile figcaption {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  min-height: 0 !important;
+  padding: 12px 14px !important;
+  margin: 0 !important;
+  background: #111 !important;
+}
+/* Stop the about portrait from artificially exceeding its container height. */
+body .about-photo {
+  height: auto !important;
+  aspect-ratio: auto !important;
+  overflow: hidden;
+}
+body .about-photo img {
+  height: auto !important;
+  width: 100% !important;
+  object-fit: contain !important;
+}
+/* Previously tall cards should not span two grid rows after auto-sizing. */
+body .creative-mosaic .tall,
+body .events-mosaic .tall,
+body .product-mosaic .tall {
+  grid-row: auto !important;
+}
+@media (max-width: 760px) {
+  body .portfolio-block .mosaic,
+  body .portfolio-block .auto-grid,
+  body .brand-showcase .showcase-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 22px !important;
+  }
+  body .portfolio-block .mosaic .tile,
+  body .portfolio-block .auto-grid .tile {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+}
