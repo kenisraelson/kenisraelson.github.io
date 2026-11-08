@@ -309,3 +309,55 @@ body .portfolio-block .product-mosaic > .tile.product-holster img {
     max-width: 100% !important;
   }
 }
+
+/* V5 — restore the original three-image creative mosaic on wider screens.
+   Oakley is the portrait anchor; ESP LTD and Corvette stack beside it.
+   All other sections keep the curated V4 presentation. */
+@media (min-width: 761px) {
+  body .portfolio-block .creative-mosaic {
+    display: grid !important;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) !important;
+    grid-template-rows: minmax(0, auto) minmax(0, auto) !important;
+    column-gap: clamp(14px, 2vw, 26px) !important;
+    row-gap: clamp(14px, 2vw, 26px) !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+    columns: auto !important;
+    width: 100% !important;
+  }
+  body .portfolio-block .creative-mosaic > .tile {
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    align-self: stretch !important;
+    justify-self: stretch !important;
+    overflow: hidden !important;
+  }
+  body .portfolio-block .creative-mosaic > .tile.tall {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    max-width: none !important;
+  }
+  body .portfolio-block .creative-mosaic > .tile.wide:nth-child(2) {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  body .portfolio-block .creative-mosaic > .tile.wide:nth-child(3) {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+  body .portfolio-block .creative-mosaic > .tile img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    transform: none !important;
+  }
+}
