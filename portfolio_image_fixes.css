@@ -155,3 +155,96 @@ body .showcase-item:hover img,
 body .interface-feature:hover img {
   transform: none !important;
 }
+
+/* V3 • CURATED SINGLE-COLUMN GALLERY • 2026-11-08
+   Wide images are full-width within an editorial max-width.
+   Known portrait compositions are narrower and centered.
+   This override deliberately supersedes the earlier masonry columns. */
+body .portfolio-block .mosaic,
+body .portfolio-block .auto-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  columns: auto !important;
+  column-count: 1 !important;
+  gap: clamp(24px, 4vw, 48px) !important;
+  width: 100% !important;
+}
+
+body .portfolio-block .mosaic > .tile,
+body .portfolio-block .auto-grid > .tile,
+body .portfolio-block .mosaic > figure,
+body .portfolio-block .auto-grid > figure {
+  display: flex !important;
+  flex-direction: column !important;
+  align-self: center !important;
+  flex: 0 1 auto !important;
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  break-inside: auto !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+  overflow: hidden !important;
+}
+
+/* These items are the known vertical compositions in the live gallery. */
+body .portfolio-block .creative-mosaic > .tile.tall,
+body .portfolio-block .events-mosaic > .tile.tall,
+body .portfolio-block .wedding-mosaic > .tile.tall {
+  width: min(100%, 520px) !important;
+  max-width: 520px !important;
+}
+
+/* Don't let old automotive max-width and grid sizing compete. */
+body .portfolio-block .auto-grid > .tile.john-force,
+body .portfolio-block .auto-grid > .tile.ratrod {
+  justify-self: auto !important;
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+}
+
+body .portfolio-block .mosaic > .tile img,
+body .portfolio-block .auto-grid > .tile img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Keep the two brand images deliberate, too. */
+body .brand-showcase .showcase-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: clamp(24px, 4vw, 48px) !important;
+}
+body .brand-showcase .showcase-grid > .showcase-item {
+  width: min(100%, 1120px) !important;
+  max-width: 1120px !important;
+  margin: 0 !important;
+}
+body .brand-showcase .showcase-grid > .showcase-item.shipshoot-logo-item {
+  width: min(100%, 650px) !important;
+  max-width: 650px !important;
+}
+
+/* On phones the portrait max-width never exceeds the available viewport. */
+@media (max-width: 760px) {
+  body .portfolio-block .mosaic,
+  body .portfolio-block .auto-grid,
+  body .brand-showcase .showcase-grid {
+    gap: 24px !important;
+  }
+  body .portfolio-block .mosaic > .tile,
+  body .portfolio-block .auto-grid > .tile {
+    width: 100% !important;
+  }
+}
