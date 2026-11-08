@@ -1,245 +1,57 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>Ken Israelson, Creative Visualization, Photography &amp; Graphic Design</title>
-<meta content="Creative visualization, commercial photography, graphic design and advertising by Ken Israelson. Where ideas become real." name="description"/>
-<link href="styles.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ken Israelson — Creative Visualization, Photography & Graphic Design</title>
+<meta name="description" content="Creative visualization, commercial photography, graphic design and advertising by Ken Israelson. Featuring The Concept Outpost — Where Ideas Become Real.">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="portfolio_image_fixes.css">
 <style>
-.brand-showcase { padding-block: clamp(3rem, 6vw, 6rem); }
-.showcase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem); }
-.showcase-item { margin:0; min-width:0; }
-.showcase-item img { display:block;width:100%;height:auto;object-fit:contain;border-radius:10px; }
-.showcase-item img[src*="Extended_Transparent"] { background:#24272B; padding:clamp(1rem,2vw,2rem); box-sizing:border-box; }
-.showcase-item figcaption { padding-top:.75rem; font-size:.88rem; line-height:1.45; opacity:.8; }
-@media(max-width:760px){.showcase-grid{grid-template-columns:1fr;}}
-</style>
-<style>
-/* Portfolio refinement: preserve full photographic compositions and hero typography. */
-.hero { display:block; }
-.hero-copy { max-width: 950px; width:100%; }
-.product-mosaic { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: clamp(1rem,2vw,1.75rem); }
-.product-mosaic .tile { min-width:0; }
-.product-mosaic .tile img { display:block; width:100%; height:auto; max-height:560px; object-fit:contain; object-position:center; }
-.events-mosaic { display:grid; grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.75rem); }
-.events-mosaic .tile { min-width:0; }
-.events-mosaic .tile img { width:100%;height:auto;object-fit:contain; }
-.selected .feature-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-@media (max-width:760px) { .product-mosaic,.events-mosaic,.selected .feature-grid {grid-template-columns:1fr;} }
-</style><style>
-/* Blink portfolio final editorial refinements */
-.hero { min-height:auto; padding-bottom: clamp(3rem,6vw,5.5rem); }
-.hero-copy { max-width:980px; }
-.hero h1 { font-family: "Arial Black", "Montserrat", "Segoe UI", Arial, sans-serif; font-weight: 800; font-size:clamp(3.3rem, 7.2vw, 7.8rem); letter-spacing:-.065em; line-height:.98; text-transform:uppercase; text-wrap:balance; }
-.hero-square-period { display:inline-block; width:.115em; height:.115em; background:currentColor; margin-left:.035em; vertical-align:baseline; transform:translateY(-.055em); }
-.hero-actions { margin-top:1.85rem; }
-.hero .eyebrow { letter-spacing:.19em; }
-.brand-showcase { scroll-margin-top:6rem; }
-.lab-heading { margin-top:clamp(3rem,6vw,6rem); }
-.designlab-grid { grid-template-columns:1fr; }
-.designlab-grid img { width:100%; height:auto; max-height:none; object-fit:contain; }
-.product-holster img { max-height:330px!important; width:100%; object-fit:contain; background:#151718; }
-.omnia-event img { max-height:560px; object-fit:contain; }
-@media(max-width:760px) { .hero h1 { font-size:clamp(2.8rem,10vw,5rem); letter-spacing:-.055em; } .hero-copy {padding-inline:0;} }
-</style><style>
-/* Homepage-only eyebrow: easier to read without changing other section labels. */
-.hero .eyebrow {
-  font-size: clamp(14px, 1.25vw, 16px);
-  font-weight: 700;
-  letter-spacing: .12em;
-  line-height: 1.5;
-  max-width: 100%;
+/* Full mobile-ready homepage: preserve uncropped photography and natural gallery heights. */
+.brand-showcase{padding-block:clamp(3rem,6vw,6rem)}
+.showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem)}
+.showcase-item{margin:0;min-width:0}
+.showcase-item img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
+.showcase-item img[src*="Extended_Transparent"]{background:#24272b;padding:clamp(1rem,2vw,2rem);box-sizing:border-box}
+.showcase-item figcaption{padding-top:.75rem;font-size:clamp(13px,1.04vw,15px);line-height:1.5;opacity:.94}
+.shipshoot-logo-item{display:flex;flex-direction:column;justify-content:center}
+.concept-outpost-grid{grid-template-columns:1fr;max-width:1200px;margin-inline:auto}
+.lab-heading{margin-top:clamp(3rem,6vw,6rem)}
+.product-mosaic,.events-mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2vw,1.75rem)}
+.auto-block .auto-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,26px)}
+.product-mosaic .tile,.events-mosaic .tile,.auto-block .auto-grid .tile{min-width:0;min-height:0;height:auto}
+.hero{min-height:0;display:flex;justify-content:center;padding:0;text-align:center}
+.hero .hero-copy{box-sizing:border-box;width:min(100% - 40px,1120px);max-width:1120px;min-height:0;margin:0 auto;padding:clamp(70px,8vw,118px) 0 clamp(72px,8vw,114px);display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero h1{width:100%;max-width:none;margin:0 auto;font-family:"Arial Black","Montserrat","Segoe UI",Arial,sans-serif;font-weight:800;font-size:clamp(27px,7vw,98px);line-height:1.10;letter-spacing:-.025em;word-spacing:.12em;text-align:center}
+.hero h1 .hero-line{display:inline-block;white-space:nowrap}
+.hero .eyebrow{font-size:clamp(14px,1.28vw,17px);letter-spacing:.11em;text-align:center}
+.hero .gold-rule{margin:clamp(22px,3vw,36px) auto}
+.hero p{max-width:690px;margin:0 auto 26px;text-align:center}
+.hero .hero-actions{width:100%;display:flex;justify-content:center;margin-top:14px}
+.section-heading h2{font-size:clamp(24px,2.2vw,36px);line-height:1.13}
+.section-heading p{font-size:clamp(12.5px,1.02vw,14px);line-height:1.55}
+.product-mosaic .tile img,.events-mosaic .tile img,.auto-grid .tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;transform:none!important}
+.product-mosaic .tile,.events-mosaic .tile,.auto-grid .tile{overflow:visible;display:flex;flex-direction:column}
+.product-mosaic .tile figcaption,.events-mosaic .tile figcaption,.auto-grid .tile figcaption{position:static;min-height:0;padding:10px 6px 0;background:none}
+.capabilities .capability svg{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.resume{gap:clamp(28px,5vw,80px);grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center}
+.resume-points>div{grid-template-columns:minmax(135px,170px) minmax(0,1fr);gap:22px}
+.contact{background:linear-gradient(115deg,#090909 0%,#0b0b0a 55%,#0e0d0c 100%)!important;text-align:center;justify-content:center}
+.contact>.sunset{display:none!important}
+.contact .contact-inner{display:flex;flex-direction:column;align-items:center;text-align:center}
+.contact p{max-width:760px;text-align:center}
+.contact .contact-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:26px}
+footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;text-align:center;font-size:12px;letter-spacing:.07em;padding:25px 20px 30px}
+@media(max-width:980px){.resume{grid-template-columns:1fr;gap:38px}}
+@media(max-width:760px){
+.showcase-grid,.product-mosaic,.events-mosaic,.auto-block .auto-grid{grid-template-columns:1fr}
+.shipshoot-logo-item{justify-content:flex-start}
+.hero .hero-copy{width:calc(100% - 28px);padding-block:58px 68px}
+.hero h1{font-size:clamp(24px,6.9vw,43px);letter-spacing:-.03em;word-spacing:.06em;line-height:1.14}
+.hero .eyebrow{font-size:12px;letter-spacing:.07em}
+.resume-points>div{grid-template-columns:1fr;gap:6px}
 }
-</style>
-<style>
-/* Final editorial and typography pass, 2026-10-24 */
-/* Center the entire introduction, without stretching the words unnaturally. */
-.hero { display:flex; justify-content:center; }
-.hero-copy {
-  width:min(100% - 48px, 850px);
-  max-width:850px;
-  min-height:0;
-  margin:0 auto;
-  padding:clamp(56px,7vw,105px) 0 clamp(62px,7vw,108px);
-  align-items:stretch;
-}
-.hero h1 { max-width:100%; }
-.hero-actions { width:100%; justify-content:center; }
-/* Bring category labels forward, and restore readable supporting labels. */
-.eyebrow { font-size:clamp(13px,1.15vw,16px); letter-spacing:.15em; line-height:1.5; }
-.hero .eyebrow { font-size:clamp(14px,1.28vw,17px); letter-spacing:.11em; }
-.section-heading h2 { font-size:clamp(24px,2.2vw,36px); line-height:1.13; }
-.section-heading p { font-size:clamp(12.5px,1.02vw,14px); line-height:1.55; }
-.showcase-item figcaption { font-size:clamp(13px,1.04vw,15px); opacity:.94; line-height:1.5; }
-.tile figcaption { font-size:clamp(13px,1.02vw,15px); letter-spacing:.055em; }
-.capability strong { font-size:13px; }
-.capability span { font-size:13px; }
-/* Make the two Design Lab treatments the same grid size as the patio pair. */
-.designlab-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-.designlab-grid img { width:100%; height:auto; max-height:none; object-fit:contain; }
-/* Use the unused vertical space beside the tall jewelry advertisement. */
-.brand-showcase > .showcase-grid:first-of-type { align-items:stretch; }
-.shipshoot-logo-item {
-  display:flex; flex-direction:column; justify-content:center;
-}
-.shipshoot-logo-item img { width:100%; height:auto; object-fit:contain; }
-.shipshoot-logo-item figcaption { align-self:stretch; }
-@media(max-width:760px) {
-  .hero-copy { width:calc(100% - 42px); padding-block:64px 72px; }
-  .hero h1 { font-size:clamp(2.7rem,10vw,5rem); }
-  .designlab-grid { grid-template-columns:1fr; }
-  .shipshoot-logo-item { justify-content:flex-start; }
-  .section-heading { gap:14px; }
-}
-</style><style>
-/* 2026-10-24: Final homepage and closing-section layout correction. */
-.hero { display:flex; justify-content:center; padding:0; text-align:center; }
-.hero .hero-copy {
-  box-sizing:border-box; width:min(100% - 40px, 1120px); max-width:1120px;
-  margin:0 auto; padding:clamp(70px,8vw,118px) 0 clamp(72px,8vw,114px);
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  text-align:center;
-}
-.hero h1 {
-  width:100%; max-width:none; margin:0 auto;
-  font-family:"Arial Black","Montserrat","Segoe UI",Arial,sans-serif;
-  font-weight:800; font-size:clamp(27px,7vw,98px);
-  line-height:1.10; letter-spacing:-.025em; word-spacing:.12em;
-  text-align:center; text-wrap:unset;
-}
-.hero h1 .hero-line { display:inline-block; white-space:nowrap; }
-.hero .eyebrow { margin-inline:auto; text-align:center; }
-.hero .gold-rule { margin:clamp(22px,3vw,36px) auto; }
-.hero p { max-width:690px; margin:0 auto 26px; text-align:center; }
-.hero .hero-actions { width:100%; display:flex; justify-content:center; margin-top:14px; }
-.hero .hero-actions .button { justify-content:center; }
-/* Resume section: calm introductory column, four coherent experience points. */
-.resume { gap:clamp(28px,5vw,80px); grid-template-columns:minmax(0, .95fr) minmax(0, 1.05fr); align-items:center; }
-.resume-copy h2 { max-width:560px; }
-.resume-copy p { max-width:560px; }
-.resume-points > div { grid-template-columns:minmax(135px, 170px) minmax(0,1fr); gap:22px; align-items:start; }
-.resume-points strong { font-size:clamp(12px,1vw,14px); line-height:1.45; letter-spacing:.04em; }
-.resume-points span { font-size:clamp(14px,1.15vw,16px); line-height:1.55; }
-/* Final contact and footer are centered as a unified closing composition. */
-.contact { text-align:center; justify-content:center; }
-.contact .contact-inner { display:flex; flex-direction:column; align-items:center; text-align:center; }
-.contact .eyebrow { text-align:center; }
-.contact h2 { max-width:100%; text-align:center; }
-.contact p { max-width:760px; text-align:center; }
-.contact .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px; margin-top:26px; }
-.contact .contact-actions .button { justify-content:center; min-height:48px; }
-footer { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:7px; text-align:center; font-size:12px; letter-spacing:.07em; padding:25px 20px 30px; }
-@media(max-width:980px) {
- .resume { grid-template-columns:1fr; gap:38px; }
- .resume-points > div { grid-template-columns:minmax(120px,170px) minmax(0,1fr); }
-}
-@media(max-width:620px) {
- .hero .hero-copy { width:calc(100% - 28px); padding-block:58px 68px; }
- .hero h1 { font-size:clamp(24px,6.9vw,43px); letter-spacing:-.03em; word-spacing:.06em; line-height:1.14; }
- .hero .eyebrow { font-size:12px; letter-spacing:.07em; }
- .hero .hero-actions .button { width:auto; min-width:188px; }
- .resume-points > div { grid-template-columns:1fr; gap:6px; }
- .contact .contact-actions { flex-direction:column; width:100%; }
- .contact .contact-actions .button { width:min(100%,310px); justify-content:center; }
- footer { font-size:11px; }
-}
-</style><style>/* Approved thin-line capabilities icons, 2026-10-24 */
-.capabilities .capability svg {fill:none;stroke:currentColor;stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:round;}
-.capabilities .capability svg path,.capabilities .capability svg circle,.capabilities .capability svg rect {fill:none;stroke:inherit;stroke-width:inherit;}</style><style>
-/* October 24: automotive pair, compact equal-height displays, no cropping */
-.auto-block .auto-grid {
-  display:grid !important;
-  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  align-items:start !important;
-  gap:clamp(12px,2vw,26px) !important;
-}
-.auto-block .auto-grid > .tile {
-  display:flex !important;
-  flex-direction:column !important;
-  margin:0 !important;
-  padding:0 !important;
-  min-width:0 !important;
-  height:auto !important;
-  min-height:0 !important;
-  align-self:start !important;
-}
-.auto-block .auto-grid > .tile img {
-  display:block !important;
-  width:100% !important;
-  height:clamp(190px,23vw,335px) !important;
-  max-height:335px !important;
-  object-fit:contain !important;
-  object-position:center center !important;
-  flex:none !important;
-}
-.auto-block .auto-grid > .tile figcaption {
-  margin:0 !important;
-  min-height:0 !important;
-  padding:10px 6px 0 !important;
-}
-@media(max-width:700px) {
-  .auto-block .auto-grid {grid-template-columns:1fr !important;gap:24px !important;}
-  .auto-block .auto-grid > .tile img {height:auto !important;max-height:335px !important;}
-}
-</style><style>
-/* Holster-on-bench card: fit its frame to the image, no crop or extra vertical space. */
-.product-mosaic { align-items: start !important; }
-.product-mosaic > .product-holster {
-  display: flex !important;
-  flex-direction: column !important;
-  align-self: start !important;
-  height: auto !important;
-  min-height: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow: hidden;
-}
-.product-mosaic > .product-holster img {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 330px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  flex: 0 0 auto !important;
-}
-.product-mosaic > .product-holster figcaption {
-  margin: 0 !important;
-  min-height: 0 !important;
-  padding: 10px 6px !important;
-}
-</style>
-
-<style>
-/* Final surgical cleanup: equal-height, uncropped product photos. */
-.product-mosaic > .tile {
-  min-height: 0 !important;
-  height: auto !important;
-}
-.product-mosaic > .tile img,
-.product-mosaic > .product-holster img {
-  display: block !important;
-  width: 100% !important;
-  height: clamp(220px, 25vw, 330px) !important;
-  max-height: none !important;
-  object-fit: contain !important;
-  object-position: center !important;
-}
-/* No enclosing border or dark box behind the holster photograph. */
-.product-mosaic > .product-holster {
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  outline: none !important;
-}
-.product-mosaic > .product-holster img { background: transparent !important; }
-/* Remove the circular sunset ornament on the right of the closing area. */
-.contact {
-  background: linear-gradient(115deg,#090909 0%,#0b0b0a 55%,#0e0d0c 100%) !important;
-}
-.contact > .sunset { display:none !important; }
 </style>
 </head>
 <body>
@@ -249,200 +61,165 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
 <span class="brand-sub">Visual Content / Product Imaging Specialist</span>
 </a>
 <nav aria-label="Primary navigation">
-<a href="#brand-showcase">WORK</a>
-<a href="#about">ABOUT</a>
-<a href="#resume">RESUME</a>
-<a href="#contact">CONTACT</a>
+<a href="#brand-showcase">WORK</a><a href="#about">ABOUT</a><a href="#resume">RESUME</a><a href="#contact">CONTACT</a>
 </nav>
 </header>
 <main id="top">
 <section class="hero">
 <div class="hero-copy reveal">
 <div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div>
-<h1><span class="hero-line">WHERE IDEAS</span><br/><span class="hero-line">BECOME REAL</span></h1>
+<h1><span class="hero-line">WHERE IDEAS</span><br><span class="hero-line">BECOME REAL</span></h1>
 <div class="gold-rule"></div>
 <p>Transforming ideas into compelling visual experiences, from imaginative concepts and commercial photography to brand identities and advertising.</p>
-<div class="hero-actions">
-<a class="button" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">RESUME PDF <span>↗</span></a>
-</div>
+<div class="hero-actions"><a class="button" href="Ken_Resume.pdf" target="_blank" rel="noopener">RESUME PDF <span>↗</span></a></div>
 </div>
 </section>
 <section class="about" id="about">
-<div class="about-photo reveal">
-<img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"/>
-</div>
+<div class="about-photo reveal"><img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"></div>
 <div class="about-copy reveal">
-<div class="eyebrow">ABOUT</div>
-<h2>Photographer.<br/>Creator. Producer.</h2>
-<div class="gold-rule short"></div>
-<p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, portraiture.</p>
-<p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful, not just decorative.</p>
-<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events, assignments that demand adaptability, precise timing, and strong visual storytelling.</p><p class="relocation">Relocating to the Nashville / Murfreesboro, Tennessee area in early November 2026.</p>
-</div>
-</section><section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
-<div class="section-heading reveal">
-<div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div>
-<p>Commercial photography, brand identity, and architectural concept visualization.</p>
-</div>
+<div class="eyebrow">ABOUT</div><h2>Photographer.<br>Creator. Producer.</h2><div class="gold-rule short"></div>
+<p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, and portraiture.</p>
+<p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful—not just decorative.</p>
+<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events—assignments that demand adaptability, precise timing, and strong visual storytelling.</p>
+<p class="relocation">Based in Murfreesboro, Tennessee, serving the Nashville area and beyond.</p>
+</div></section>
+<section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
+<div class="section-heading reveal"><div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div>
+<p>Commercial photography, brand identity, and architectural concept visualization.</p></div>
 <div class="showcase-grid">
+<figure class="showcase-item reveal"><img alt="Necklace advertising concept with Unforgettable typography" loading="lazy" src="ShipShoot_Jewelry_Ad_v01.png"><figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption></figure>
+<figure class="showcase-item reveal shipshoot-logo-item"><img alt="ShipShoot Studios transparent extended brand identity" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"><figcaption>ShipShoot Studios · Brand Identity &amp; Advertising Concept</figcaption></figure>
+</div>
+<div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE IMAGING &amp; CONCEPT VISUALIZATION</div><h2>The Concept Outpost.</h2></div>
+<p>Where Ideas Become Real. The Concept Outpost transforms sketches, photographs, and unfinished spaces into compelling visual possibilities—from architectural additions and outdoor retreats to product concepts, custom vehicles, and restoration previews. Creative imaging, digital compositing, and concept visualization help clients see the vision before work begins.</p></div>
+<div class="showcase-grid concept-outpost-grid">
 <figure class="showcase-item reveal">
-<img alt="Necklace advertising concept with Unforgettable typography" loading="lazy" src="ShipShoot_Jewelry_Ad_v01.png"/>
-<figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption>
-</figure>
-<figure class="showcase-item reveal shipshoot-logo-item">
-<img alt="ShipShoot Studios transparent extended brand identity with Ship Shoot Sell tagline" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"/>
-<figcaption>ShipShoot Studios · Original brand identity and campaign lockup</figcaption>
-</figure>
-</div><div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE CONCEPT &amp; BRAND PRESENTATION</div><h2>The Design Lab.</h2></div><p>Two visual treatments exploring an imaginative studio identity, architectural concepts, and creative visualization.</p></div><div class="showcase-grid designlab-grid"><figure class="showcase-item reveal"><img alt="The Design Lab concept banner with model house and creative laboratory imagery" loading="lazy" src="The Design Lab_ Ideas Become Reality.png"/><figcaption>The Design Lab · Concept identity and visualization</figcaption></figure><figure class="showcase-item reveal"><img alt="The Design Lab at Dusk cinematic studio visualization" loading="lazy" src="The Design Lab at Dusk.png"/><figcaption>The Design Lab at Dusk · Environmental concept treatment</figcaption></figure></div>
-<!-- THE DESIGN LAB · patio transformation component (paste inside Design Lab section) -->
+<img alt="The Concept Outpost mid-century design studio at sunset, with a luxury spa retreat materializing from a blueprint" loading="lazy" decoding="async" width="1600" height="900" src="The_Concept_Outpost_Hero_V2.webp">
+<figcaption>The Concept Outpost · Creative Imaging &amp; Concept Visualization · Where Ideas Become Real</figcaption>
+</figure></div>
+
+<!-- PRESERVED: Architectural patio video and interactive comparison slider -->
 <section class="dl-patio" aria-labelledby="dl-patio-heading">
-  <style>
-    .dl-patio{color:inherit;max-width:1100px;margin:2.5rem auto;font-family:inherit}
-    .dl-patio h3{font-size:clamp(1.35rem,3vw,2rem);letter-spacing:.035em;margin:0 0 .4rem}
-    .dl-patio p{line-height:1.6;opacity:.8;margin:0 0 1.25rem;max-width:64ch}
-    .dl-patio-visual{position:relative;aspect-ratio:1670/940;overflow:hidden;border-radius:12px;background:#222}
-    .dl-patio video,.dl-patio .dl-compare,.dl-patio .dl-compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .dl-patio video{display:block}
-    .dl-patio .dl-compare{display:none;user-select:none;touch-action:pan-y}
-    .dl-patio .dl-compare.active{display:block}
-    .dl-patio .dl-compare img{pointer-events:none}
-    .dl-patio .dl-after{clip-path:inset(0 0 0 50%)}
-    .dl-patio .dl-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;box-shadow:0 0 3px #222;transform:translateX(-50%);pointer-events:none}
-    .dl-patio .dl-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#f09b50;color:#141414;border:2px solid white;border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-weight:800;pointer-events:none}
-    .dl-patio .dl-tag{position:absolute;top:12px;background:rgba(15,15,15,.72);color:white;padding:5px 10px;border-radius:4px;letter-spacing:.12em;font-size:.72rem;pointer-events:none}
-    .dl-patio .dl-before-tag{left:12px}.dl-patio .dl-after-tag{right:12px}
-    .dl-patio input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
-    .dl-patio .dl-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.85rem}
-    .dl-patio button{background:transparent;color:inherit;border:1px solid currentColor;border-radius:5px;padding:.6rem .9rem;cursor:pointer;font:inherit}
-    .dl-patio button[aria-pressed=true]{background:#f09b50;color:#161616;border-color:#f09b50}
-    .dl-patio button:focus-visible,.dl-patio input:focus-visible{outline:3px solid #f09b50;outline-offset:3px}
-    .dl-patio .dl-hint{font-size:.85rem;opacity:.72}
-  </style>
-  <h3 id="dl-patio-heading">FROM CONCEPT TO REALITY</h3>
-  <p>Architectural visualization · AI-assisted image development · compositing and keyframed animation</p>
-  <div class="dl-patio-visual">
-    <video muted playsinline preload="metadata" poster="patio-after.jpg" aria-label="Open patio transforms into a furnished screened enclosure">
-      <source src="patio-transformation.mp4" type="video/mp4">
-      Your browser does not support this video.
-    </video>
-    <div class="dl-compare" aria-label="Compare the open patio before and the enclosed patio after">
-      <img src="patio-before.jpg" alt="Before: clean open patio" loading="lazy">
-      <img src="patio-after.jpg" alt="After: furnished screened enclosure" class="dl-after" loading="lazy">
-      <span class="dl-tag dl-before-tag">BEFORE</span><span class="dl-tag dl-after-tag">AFTER</span>
-      <div class="dl-divider"></div><div class="dl-grip" aria-hidden="true">↔</div>
-      <input type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare before and after">
-    </div>
-  </div>
-  <div class="dl-controls">
-    <button type="button" class="dl-replay">↻ Replay transformation</button>
-    <button type="button" class="dl-toggle" aria-pressed="false">⇆ Compare before / after</button>
-    <span class="dl-hint">Play once, then drag to explore the result.</span>
-  </div>
-  <script>
-    (()=>{
-      const section=document.currentScript.closest('.dl-patio');
-      if(section.dataset.ready)return;section.dataset.ready='1';
-      const video=section.querySelector('video'),box=section.querySelector('.dl-compare');
-      const slider=box.querySelector('input'),after=box.querySelector('.dl-after');
-      const divider=box.querySelector('.dl-divider'),grip=box.querySelector('.dl-grip');
-      const replay=section.querySelector('.dl-replay'),toggle=section.querySelector('.dl-toggle');
-      let started=false,comparing=false;
-      function setSplit(){const x=Number(slider.value);after.style.clipPath=`inset(0 0 0 ${x}%)`;divider.style.left=`${x}%`;grip.style.left=`${x}%`;}
-      function compare(on){comparing=on;box.classList.toggle('active',on);video.style.visibility=on?'hidden':'visible';toggle.setAttribute('aria-pressed',String(on));toggle.textContent=on?'▶ Back to video':'⇆ Compare before / after';if(on)video.pause();else if(video.ended){try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}}}
-      function play(){compare(false);started=true;video.currentTime=0;video.play().catch(()=>{compare(true);});}
-      slider.addEventListener('input',setSplit);setSplit();
-      replay.addEventListener('click',play);
-      toggle.addEventListener('click',()=>compare(!comparing));
-      video.addEventListener('ended',()=>{try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}video.pause();});
-      if('IntersectionObserver' in window){
-        const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting && e.intersectionRatio>=.55)&&!started){started=true;io.disconnect();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){compare(true);slider.value=0;setSplit();}else video.play().catch(()=>compare(true));}},{threshold:[0,.55]});io.observe(section);
-      }else{compare(true);}
-    })();
-  </script>
+<style>
+.dl-patio{color:inherit;max-width:1100px;margin:2.5rem auto;font-family:inherit}
+.dl-patio h3{font-size:clamp(1.35rem,3vw,2rem);letter-spacing:.035em;margin:0 0 .4rem}
+.dl-patio p{line-height:1.6;opacity:.8;margin:0 0 1.25rem;max-width:64ch}
+.dl-patio-visual{position:relative;aspect-ratio:1670/940;overflow:hidden;border-radius:12px;background:#222}
+.dl-patio video,.dl-patio .dl-compare,.dl-patio .dl-compare img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dl-patio video{display:block}
+.dl-patio .dl-compare{display:none;user-select:none;touch-action:pan-y}
+.dl-patio .dl-compare.active{display:block}
+.dl-patio .dl-compare img{pointer-events:none}
+.dl-patio .dl-after{clip-path:inset(0 0 0 50%)}
+.dl-patio .dl-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#fff;box-shadow:0 0 3px #222;transform:translateX(-50%);pointer-events:none}
+.dl-patio .dl-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#f09b50;color:#141414;border:2px solid white;border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-weight:800;pointer-events:none}
+.dl-patio .dl-tag{position:absolute;top:12px;background:rgba(15,15,15,.72);color:white;padding:5px 10px;border-radius:4px;letter-spacing:.12em;font-size:.72rem;pointer-events:none}
+.dl-patio .dl-before-tag{left:12px}.dl-patio .dl-after-tag{right:12px}
+.dl-patio input[type=range]{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;touch-action:pan-y}
+.dl-patio .dl-controls{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-top:.85rem}
+.dl-patio button{background:transparent;color:inherit;border:1px solid currentColor;border-radius:5px;padding:.6rem .9rem;cursor:pointer;font:inherit}
+.dl-patio button[aria-pressed=true]{background:#f09b50;color:#161616;border-color:#f09b50}
+.dl-patio button:focus-visible,.dl-patio input:focus-visible{outline:3px solid #f09b50;outline-offset:3px}
+.dl-patio .dl-hint{font-size:.85rem;opacity:.72}
+</style>
+<h3 id="dl-patio-heading">FROM CONCEPT TO REALITY</h3>
+<p>Architectural visualization · AI-assisted image development · compositing and keyframed animation</p>
+<div class="dl-patio-visual">
+<video muted playsinline preload="metadata" poster="patio-after.jpg" aria-label="Open patio transforms into a furnished screened enclosure">
+<source src="patio-transformation.mp4" type="video/mp4">
+Your browser does not support this video.</video>
+<div class="dl-compare" aria-label="Compare the open patio before and the enclosed patio after">
+<img src="patio-before.jpg" alt="Before: clean open patio" loading="lazy">
+<img src="patio-after.jpg" alt="After: furnished screened enclosure" class="dl-after" loading="lazy">
+<span class="dl-tag dl-before-tag">BEFORE</span><span class="dl-tag dl-after-tag">AFTER</span>
+<div class="dl-divider"></div><div class="dl-grip" aria-hidden="true">↔</div>
+<input type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare before and after">
+</div></div>
+<div class="dl-controls">
+<button type="button" class="dl-replay">↻ Replay transformation</button>
+<button type="button" class="dl-toggle" aria-pressed="false">⇆ Compare before / after</button>
+<span class="dl-hint">Play once, then drag to explore the result.</span>
+</div>
+<script>
+(()=>{
+const section=document.currentScript.closest('.dl-patio');
+if(section.dataset.ready)return;section.dataset.ready='1';
+const video=section.querySelector('video'),box=section.querySelector('.dl-compare');
+const slider=box.querySelector('input'),after=box.querySelector('.dl-after');
+const divider=box.querySelector('.dl-divider'),grip=box.querySelector('.dl-grip');
+const replay=section.querySelector('.dl-replay'),toggle=section.querySelector('.dl-toggle');
+let started=false,comparing=false;
+function setSplit(){const x=Number(slider.value);after.style.clipPath=`inset(0 0 0 ${x}%)`;divider.style.left=`${x}%`;grip.style.left=`${x}%`;}
+function compare(on){comparing=on;box.classList.toggle('active',on);video.style.visibility=on?'hidden':'visible';toggle.setAttribute('aria-pressed',String(on));toggle.textContent=on?'▶ Back to video':'⇆ Compare before / after';if(on)video.pause();else if(video.ended){try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}}}
+function play(){compare(false);started=true;video.currentTime=0;video.play().catch(()=>{compare(true);});}
+slider.addEventListener('input',setSplit);setSplit();
+replay.addEventListener('click',play);
+toggle.addEventListener('click',()=>compare(!comparing));
+video.addEventListener('ended',()=>{try{video.currentTime=Math.max(0,video.duration-.045)}catch(e){}video.pause();});
+if('IntersectionObserver' in window){
+const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting && e.intersectionRatio>=.55)&&!started){started=true;io.disconnect();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){compare(true);slider.value=0;setSplit();}else video.play().catch(()=>compare(true));}},{threshold:[0,.55]});io.observe(section);
+}else{compare(true);}
+})();
+</script>
+</section>
 </section>
 
-</section>
 <section class="portfolio-block product-block">
-<div class="section-heading reveal">
-<div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the subject matter.</h2></div>
-<p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p>
-</div>
+<div class="section-heading reveal"><div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the subject matter.</h2></div>
+<p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p></div>
 <div class="mosaic product-mosaic">
-<figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"/><figcaption>Tabletop / Technology</figcaption></figure>
-<figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'" src="hero-product.JPG"/><figcaption>Product / Lifestyle Studio</figcaption></figure>
-</div>
-</section>
+<figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"><figcaption>Tabletop / Technology</figcaption></figure>
+<figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" src="hero-product.JPG" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'"><figcaption>Product / Lifestyle Studio</figcaption></figure>
+</div></section>
 <section class="portfolio-block creative-block">
-<div class="section-heading reveal">
-<div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div>
-<p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p>
-</div>
+<div class="section-heading reveal"><div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div>
+<p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p></div>
 <div class="mosaic creative-mosaic">
-<figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"/><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
-<figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"/><figcaption>Music Product Advertising</figcaption></figure>
-<figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"/><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
-</div>
-</section>
+<figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
+<figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"><figcaption>Music Product Advertising</figcaption></figure>
+<figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
+</div></section>
 <section class="portfolio-block event-block">
-<div class="section-heading reveal">
-<div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div>
-<p>Live performance, corporate events, audiences, and candid human interaction.</p>
-</div>
+<div class="section-heading reveal"><div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div>
+<p>Live performance, corporate events, audiences, and candid human interaction.</p></div>
 <div class="mosaic events-mosaic">
-<figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"/><figcaption>Live Performance</figcaption></figure>
-<figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"/><figcaption>Team / Outdoor Event</figcaption></figure>
-<figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"/><figcaption>OMNIA / Live Entertainment</figcaption></figure></div>
-</section>
+<figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"><figcaption>Live Performance</figcaption></figure>
+<figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"><figcaption>Team / Outdoor Event</figcaption></figure>
+<figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"><figcaption>OMNIA / Live Entertainment</figcaption></figure>
+</div></section>
 <section class="portfolio-block wedding-block">
 <div aria-hidden="true" class="wedding-bg"></div>
-<div class="section-heading reveal">
-<div><div class="eyebrow">WEDDINGS &amp; PORTRAITURE</div><h2>Quiet details. Real connection.</h2></div>
-<p>Romantic portraiture, storytelling details, and intimate moments without overworking the scene.</p>
-</div>
+<div class="section-heading reveal"><div><div class="eyebrow">WEDDINGS &amp; PORTRAITURE</div><h2>Quiet details. Real connection.</h2></div>
+<p>Romantic portraiture, storytelling details, and intimate moments without overworking the scene.</p></div>
 <div class="mosaic wedding-mosaic">
-<figure class="tile wide reveal"><img alt="Bride reflected in a mirror" loading="lazy" src="assets/images/bride-mirror.webp"/><figcaption>Bridal Portrait</figcaption></figure>
-<figure class="tile tall reveal"><img alt="Wedding rings in front of deep red roses" loading="lazy" src="assets/images/wedding-rings.webp"/><figcaption>Wedding Detail</figcaption></figure>
-<figure class="tile tall reveal"><img alt="Wedding couple portrait against stained glass" loading="lazy" src="assets/images/wedding-couple.webp"/><figcaption>Wedding Portrait</figcaption></figure>
-</div>
-</section>
+<figure class="tile wide reveal"><img alt="Bride reflected in a mirror" loading="lazy" src="assets/images/bride-mirror.webp"><figcaption>Bridal Portrait</figcaption></figure>
+<figure class="tile tall reveal"><img alt="Wedding rings in front of deep red roses" loading="lazy" src="assets/images/wedding-rings.webp"><figcaption>Wedding Detail</figcaption></figure>
+<figure class="tile tall reveal"><img alt="Wedding couple portrait against stained glass" loading="lazy" src="assets/images/wedding-couple.webp"><figcaption>Wedding Portrait</figcaption></figure>
+</div></section>
 <section class="portfolio-block auto-block">
-<div class="section-heading reveal">
-<div><div class="eyebrow">AUTOMOTIVE &amp; MOTORSPORTS</div><h2>Motion, metal, and attitude.</h2></div>
-<p>Cars, racing, and the visual culture around them.</p>
-</div>
+<div class="section-heading reveal"><div><div class="eyebrow">AUTOMOTIVE &amp; MOTORSPORTS</div><h2>Motion, metal, and attitude.</h2></div>
+<p>Cars, racing, and the visual culture around them.</p></div>
 <div class="auto-grid">
-<figure class="tile john-force reveal"><img alt="John Force Castrol Funny Car racing alongside another Funny Car" loading="lazy" src="assets/images/john-force-funny-car.jpg"/><figcaption>Funny Car / Track Action</figcaption></figure>
-<figure class="tile ratrod reveal"><img alt="Orange Mercury photograph paired with a graphic interpretation" loading="lazy" src="assets/images/mercury-graphic.jpg"/><figcaption>Automotive / Graphic Transformation</figcaption></figure>
+<figure class="tile john-force reveal"><img alt="John Force Castrol Funny Car racing alongside another Funny Car" loading="lazy" src="assets/images/john-force-funny-car.jpg"><figcaption>Funny Car / Track Action</figcaption></figure>
+<figure class="tile ratrod reveal"><img alt="Orange Mercury photograph paired with a graphic interpretation" loading="lazy" src="assets/images/mercury-graphic.jpg"><figcaption>Automotive / Graphic Transformation</figcaption></figure>
 </div>
-<p class="small-source-note reveal">The Funny Car image is intentionally presented at a smaller size because the surviving source file is low resolution.</p>
-</section>
+<p class="small-source-note reveal">The Funny Car image is intentionally presented at a smaller size because the surviving source file is low resolution.</p></section>
 <section aria-label="Capabilities" class="capabilities reveal">
-<div class="capability">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><path d="M12 22h10l4-6h12l4 6h10a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5Z"></path><circle cx="32" cy="37" r="11"></circle><circle cx="32" cy="37" r="7"></circle></svg>
-<div><strong>30+ YEARS</strong><span>Professional Photography</span></div>
-</div>
-<div class="capability">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><rect height="35" rx="2.5" width="48" x="8" y="12"></rect><path d="M31 47v8M22 55h20M16 20h32v20H16zM21 36l9-9 7 6 4-4 5 7"></path><circle cx="43" cy="25" r="2.3"></circle></svg>
-<div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div>
-</div>
-<div class="capability">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><path d="M25 44h14M27 49h10M32 53v2M24 36c-3-3-5-7-5-11a13 13 0 0 1 26 0c0 5-3 9-6 12l-2 5H27l-3-6Z M32 4v5M12 25h-5M52 25h5M17 10l4 4M47 10l-4 4"></path></svg>
-<div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div>
-</div>
-<div class="capability">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 64 64"><g transform="rotate(45 32 32)"><path d="M17 12c-1 9-6 10-6 20s5 11 6 20M47 12c1 9 6 10 6 20s-5 11-6 20"></path><circle cx="32" cy="32" r="10"></circle><path d="M25 7v50M28.5 7v50M32 7v50M35.5 7v50M39 7v50"></path></g></svg>
-<div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div>
-</div>
+<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M12 22h10l4-6h12l4 6h10a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5Z"></path><circle cx="32" cy="37" r="11"></circle><circle cx="32" cy="37" r="7"></circle></svg><div><strong>30+ YEARS</strong><span>Professional Photography</span></div></div>
+<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><rect height="35" rx="2.5" width="48" x="8" y="12"></rect><path d="M31 47v8M22 55h20M16 20h32v20H16zM21 36l9-9 7 6 4-4 5 7"></path><circle cx="43" cy="25" r="2.3"></circle></svg><div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div></div>
+<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M25 44h14M27 49h10M32 53v2M24 36c-3-3-5-7-5-11a13 13 0 0 1 26 0c0 5-3 9-6 12l-2 5H27l-3-6Z M32 4v5M12 25h-5M52 25h5M17 10l4 4M47 10l-4 4"></path></svg><div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div></div>
+<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><g transform="rotate(45 32 32)"><path d="M17 12c-1 9-6 10-6 20s5 11 6 20M47 12c1 9 6 10 6 20s-5 11-6 20"></path><circle cx="32" cy="32" r="10"></circle><path d="M25 7v50M28.5 7v50M32 7v50M35.5 7v50M39 7v50"></path></g></svg><div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div></div>
 </section>
 <section class="resume" id="resume">
-<div class="resume-copy reveal">
-<div class="eyebrow">RESUME</div>
-<h2>Experience meets creativity.</h2>
+<div class="resume-copy reveal"><div class="eyebrow">RESUME</div><h2>Experience meets creativity.</h2>
 <p>Decades of professional photography, creative production, and visual problem-solving.</p>
-<a class="button gold" href="Ken_Israelson_Creative_Marketing_Designer.pdf" rel="noopener" target="_blank">VIEW RESUME PDF <span>↗</span></a>
-</div>
-<div class="resume-points reveal"><div><strong>We The People Holsters</strong><span>Commercial advertising, product photography, graphic design, and digital imaging.</span></div><div><strong>Cashman Professional</strong><span>Weddings, conferences, entertainment, events, client collaboration, and photographer training.</span></div><div><strong>Canon</strong><span>EOS technical support, photographic education, and creative problem-solving.</span></div><div><strong>Sitel</strong><span>Team leadership, coaching, and production-minded workflows.</span></div></div>
-</section>
+<a class="button gold" href="Ken_Resume.pdf" target="_blank" rel="noopener">VIEW RESUME PDF <span>↗</span></a></div>
+<div class="resume-points reveal">
+<div><strong>We The People Holsters</strong><span>Commercial advertising, product photography, graphic design, and digital imaging.</span></div>
+<div><strong>Cashman Professional</strong><span>Weddings, conferences, entertainment, events, client collaboration, and photographer training.</span></div>
+<div><strong>Canon</strong><span>EOS technical support, photographic education, and creative problem-solving.</span></div>
+<div><strong>Sitel</strong><span>Team leadership, coaching, and production-minded workflows.</span></div>
+</div></section>
 <section class="contact" id="contact">
 <div aria-hidden="true" class="sunset"><div class="mountain one"></div><div class="mountain two"></div></div>
 <div class="contact-inner reveal">
@@ -452,14 +229,9 @@ footer { display:flex; flex-direction:column; align-items:center; justify-conten
 <div class="contact-actions">
 <a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a>
 <a class="button" href="tel:+17578165955">757.816.5955</a>
-</div>
-</div>
-</section>
+</div></div></section>
 </main>
-<footer>
-<span>© 2026 Ken Israelson</span>
-<span>Henderson, Nevada • Relocating to Tennessee</span>
-</footer>
+<footer><span>© 2026 Ken Israelson</span><span>Murfreesboro, Tennessee</span></footer>
 <script src="script.js"></script>
 </body>
 </html>
