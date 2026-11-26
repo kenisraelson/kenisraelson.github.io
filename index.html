@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="portfolio_image_fixes.css">
 <style>
-/* Full mobile-ready homepage: preserve uncropped photography and natural gallery heights. */
 .brand-showcase{padding-block:clamp(3rem,6vw,6rem)}
 .showcase-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem)}
 .showcase-item{margin:0;min-width:0}
@@ -52,53 +51,34 @@ footer{display:flex;flex-direction:column;align-items:center;justify-content:cen
 .hero .eyebrow{font-size:12px;letter-spacing:.07em}
 .resume-points>div{grid-template-columns:1fr;gap:6px}
 }
+body .brand-showcase .showcase-grid:not(.concept-outpost-grid) > .showcase-item:first-child{width:min(100%,760px)!important;max-width:760px!important}
+body .portfolio-block .auto-grid > .tile.john-force{width:min(100%,760px)!important;max-width:760px!important}
+body .capabilities{grid-template-columns:repeat(3,minmax(0,1fr))}
+.backyard-projects{margin-top:2.5rem}
+.landscape-gallery{width:90%;margin-inline:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(14px,2vw,26px)}
+.landscape-gallery figure{margin:0;min-width:0}
+.landscape-gallery .panorama{grid-column:1/-1}
+.landscape-gallery img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
+.landscape-gallery figcaption{padding:10px 6px;font-size:14px}
+@media(max-width:760px){body .capabilities{grid-template-columns:1fr}.landscape-gallery{width:100%;grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="site-header">
-<a aria-label="Ken Israelson home" class="brand" href="#top">
-<span class="brand-name">KEN ISRAELSON</span>
-<span class="brand-sub">Visual Content / Product Imaging Specialist</span>
-</a>
-<nav aria-label="Primary navigation">
-<a href="#brand-showcase">WORK</a><a href="#about">ABOUT</a><a href="#resume">RESUME</a><a href="#contact">CONTACT</a>
-</nav>
+<a aria-label="Ken Israelson home" class="brand" href="#top"><span class="brand-name">KEN ISRAELSON</span><span class="brand-sub">Visual Content / Product Imaging Specialist</span></a>
+<nav aria-label="Primary navigation"><a href="#brand-showcase">WORK</a><a href="#about">ABOUT</a><a href="#resume">RESUME</a><a href="#contact">CONTACT</a></nav>
 </header>
 <main id="top">
-<section class="hero">
-<div class="hero-copy reveal">
-<div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div>
-<h1><span class="hero-line">WHERE IDEAS</span><br><span class="hero-line">BECOME REAL</span></h1>
-<div class="gold-rule"></div>
-<p>Transforming ideas into compelling visual experiences, from imaginative concepts and commercial photography to brand identities and advertising.</p>
-<div class="hero-actions"><a class="button" href="Ken_Resume.pdf" target="_blank" rel="noopener">RESUME PDF <span>↗</span></a></div>
-</div>
-</section>
-<section class="about" id="about">
-<div class="about-photo reveal"><img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"></div>
-<div class="about-copy reveal">
-<div class="eyebrow">ABOUT</div><h2>Photographer.<br>Creator. Producer.</h2><div class="gold-rule short"></div>
+<section class="hero"><div class="hero-copy reveal"><div class="eyebrow">CREATIVE VISUALIZATION • PHOTOGRAPHY • GRAPHIC DESIGN</div><h1><span class="hero-line">WHERE IDEAS</span><br><span class="hero-line">BECOME REAL</span></h1><div class="gold-rule"></div><p>Transforming ideas into compelling visual experiences, from imaginative concepts and commercial photography to brand identities and advertising.</p><div class="hero-actions"><a class="button" href="Ken_Resume.pdf" target="_blank" rel="noopener">RESUME PDF <span>↗</span></a></div></div></section>
+<section class="about" id="about"><div class="about-photo reveal"><img alt="Ken Israelson photographing with a Nikon camera" src="assets/images/about-ken.webp"></div><div class="about-copy reveal"><div class="eyebrow">ABOUT</div><h2>Photographer.<br>Creator. Producer.</h2><div class="gold-rule short"></div>
 <p>I began my photography career in <strong>Seattle</strong>, then built a 30+ year career through <strong>Hawaii, Virginia, and Las Vegas</strong>. My work has included product and e-commerce photography, automotive and motorsports, events, weddings, architecture, and portraiture.</p>
 <p>Along the way I supported photographers at Canon, produced commercial imagery across a wide range of industries, and developed deep experience in Photoshop, retouching, compositing, and visual production. Today I focus on making images that are technically strong, believable, and useful—not just decorative.</p>
-<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events—assignments that demand adaptability, precise timing, and strong visual storytelling.</p>
-<p class="relocation">Based in Murfreesboro, Tennessee, serving the Nashville area and beyond.</p>
-</div></section>
+<p>My event work spans corporate conferences, conventions, awards galas, live entertainment, nightlife, weddings, and special events—assignments that demand adaptability, precise timing, and strong visual storytelling.</p><p class="relocation">Based in Murfreesboro, Tennessee, serving the Nashville area and beyond.</p></div></section>
 <section aria-labelledby="showcase-title" class="portfolio-block brand-showcase" id="brand-showcase">
-<div class="section-heading reveal"><div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div>
-<p>Commercial photography, brand identity, and architectural concept visualization.</p></div>
-<div class="showcase-grid">
-<figure class="showcase-item reveal"><img alt="Necklace advertising concept with Unforgettable typography" loading="lazy" src="ShipShoot_Jewelry_Ad_v01.png"><figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption></figure>
-<figure class="showcase-item reveal shipshoot-logo-item"><img alt="ShipShoot Studios transparent extended brand identity" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"><figcaption>ShipShoot Studios · Brand Identity &amp; Advertising Concept</figcaption></figure>
-</div>
-<div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE IMAGING &amp; CONCEPT VISUALIZATION</div><h2>The Concept Outpost.</h2></div>
-<p>Where Ideas Become Real. The Concept Outpost transforms sketches, photographs, and unfinished spaces into compelling visual possibilities—from architectural additions and outdoor retreats to product concepts, custom vehicles, and restoration previews. Creative imaging, digital compositing, and concept visualization help clients see the vision before work begins.</p></div>
-<div class="showcase-grid concept-outpost-grid">
-<figure class="showcase-item reveal">
-<img alt="The Concept Outpost mid-century design studio at sunset, with a luxury spa retreat materializing from a blueprint" loading="lazy" decoding="async" width="1600" height="900" src="The_Concept_Outpost_Hero_V2.webp">
-<figcaption>The Concept Outpost · Creative Imaging &amp; Concept Visualization · Where Ideas Become Real</figcaption>
-</figure></div>
-
-<!-- PRESERVED: Architectural patio video and interactive comparison slider -->
+<div class="section-heading reveal"><div><div class="eyebrow">BRAND IDENTITY &amp; CAMPAIGN CREATIVE</div><h2 id="showcase-title">From idea to identity.</h2></div><p>Commercial photography, brand identity, and architectural concept visualization.</p></div>
+<div class="showcase-grid"><figure class="showcase-item reveal"><img alt="Necklace advertising concept with Unforgettable typography" loading="lazy" src="ShipShoot_Jewelry_Ad_v01.png"><figcaption>Jewelry advertising concept · Art direction, photography &amp; typography</figcaption></figure><figure class="showcase-item reveal shipshoot-logo-item"><img alt="ShipShoot Studios transparent extended brand identity" loading="lazy" src="ShipShoot_Studios_Extended_Transparent.png"><figcaption>ShipShoot Studios · Brand Identity &amp; Advertising Concept</figcaption></figure></div>
+<div class="section-heading reveal lab-heading"><div><div class="eyebrow">CREATIVE IMAGING &amp; CONCEPT VISUALIZATION</div><h2>The Concept Outpost.</h2></div><p>Where Ideas Become Real. The Concept Outpost transforms sketches, photographs, and unfinished spaces into compelling visual possibilities—from architectural additions and outdoor retreats to product concepts, custom vehicles, and restoration previews. Creative imaging, digital compositing, and concept visualization help clients see the vision before work begins.</p></div>
+<div class="showcase-grid concept-outpost-grid"><figure class="showcase-item reveal"><img alt="The Concept Outpost mid-century design studio at sunset, with a luxury spa retreat materializing from a blueprint" loading="lazy" decoding="async" width="1600" height="900" src="The_Concept_Outpost_Hero_V2.webp"><figcaption>The Concept Outpost · Creative Imaging &amp; Concept Visualization · Where Ideas Become Real</figcaption></figure></div>
 <section class="dl-patio" aria-labelledby="dl-patio-heading">
 <style>
 .dl-patio{color:inherit;max-width:1100px;margin:2.5rem auto;font-family:inherit}
@@ -122,24 +102,9 @@ footer{display:flex;flex-direction:column;align-items:center;justify-content:cen
 .dl-patio button:focus-visible,.dl-patio input:focus-visible{outline:3px solid #f09b50;outline-offset:3px}
 .dl-patio .dl-hint{font-size:.85rem;opacity:.72}
 </style>
-<h3 id="dl-patio-heading">FROM CONCEPT TO REALITY</h3>
-<p>Architectural visualization · AI-assisted image development · compositing and keyframed animation</p>
-<div class="dl-patio-visual">
-<video muted playsinline preload="metadata" poster="patio-after.jpg" aria-label="Open patio transforms into a furnished screened enclosure">
-<source src="patio-transformation.mp4" type="video/mp4">
-Your browser does not support this video.</video>
-<div class="dl-compare" aria-label="Compare the open patio before and the enclosed patio after">
-<img src="patio-before.jpg" alt="Before: clean open patio" loading="lazy">
-<img src="patio-after.jpg" alt="After: furnished screened enclosure" class="dl-after" loading="lazy">
-<span class="dl-tag dl-before-tag">BEFORE</span><span class="dl-tag dl-after-tag">AFTER</span>
-<div class="dl-divider"></div><div class="dl-grip" aria-hidden="true">↔</div>
-<input type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare before and after">
-</div></div>
-<div class="dl-controls">
-<button type="button" class="dl-replay">↻ Replay transformation</button>
-<button type="button" class="dl-toggle" aria-pressed="false">⇆ Compare before / after</button>
-<span class="dl-hint">Play once, then drag to explore the result.</span>
-</div>
+<h3 id="dl-patio-heading">FROM CONCEPT TO REALITY</h3><p>Architectural visualization · AI-assisted image development · compositing and keyframed animation</p>
+<div class="dl-patio-visual"><video muted playsinline preload="metadata" poster="patio-after.jpg" aria-label="Open patio transforms into a furnished screened enclosure"><source src="patio-transformation.mp4" type="video/mp4">Your browser does not support this video.</video><div class="dl-compare" aria-label="Compare the open patio before and the enclosed patio after"><img src="patio-before.jpg" alt="Before: clean open patio" loading="lazy"><img src="patio-after.jpg" alt="After: furnished screened enclosure" class="dl-after" loading="lazy"><span class="dl-tag dl-before-tag">BEFORE</span><span class="dl-tag dl-after-tag">AFTER</span><div class="dl-divider"></div><div class="dl-grip" aria-hidden="true">↔</div><input type="range" min="0" max="100" value="50" step="1" aria-label="Drag to compare before and after"></div></div>
+<div class="dl-controls"><button type="button" class="dl-replay">↻ Replay transformation</button><button type="button" class="dl-toggle" aria-pressed="false">⇆ Compare before / after</button><span class="dl-hint">Play once, then drag to explore the result.</span></div>
 <script>
 (()=>{
 const section=document.currentScript.closest('.dl-patio');
@@ -160,78 +125,16 @@ if('IntersectionObserver' in window){
 const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting && e.intersectionRatio>=.55)&&!started){started=true;io.disconnect();if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){compare(true);slider.value=0;setSplit();}else video.play().catch(()=>compare(true));}},{threshold:[0,.55]});io.observe(section);
 }else{compare(true);}
 })();
-</script>
+</script></section>
+<div class="showcase-grid concept-outpost-grid backyard-projects"><figure class="showcase-item reveal"><img alt="Backyard project concept 01" loading="lazy" decoding="async" src="Backyard_Project_01.png"></figure><figure class="showcase-item reveal"><img alt="Backyard project concept 02" loading="lazy" decoding="async" src="Backyard_Project_02.png"></figure></div>
 </section>
-</section>
-
-<section class="portfolio-block product-block">
-<div class="section-heading reveal"><div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the subject matter.</h2></div>
-<p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p></div>
-<div class="mosaic product-mosaic">
-<figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"><figcaption>Tabletop / Technology</figcaption></figure>
-<figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" src="hero-product.JPG" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'"><figcaption>Product / Lifestyle Studio</figcaption></figure>
-</div></section>
-<section class="portfolio-block creative-block">
-<div class="section-heading reveal"><div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div>
-<p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p></div>
-<div class="mosaic creative-mosaic">
-<figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure>
-<figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"><figcaption>Music Product Advertising</figcaption></figure>
-<figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure>
-</div></section>
-<section class="portfolio-block event-block">
-<div class="section-heading reveal"><div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div>
-<p>Live performance, corporate events, audiences, and candid human interaction.</p></div>
-<div class="mosaic events-mosaic">
-<figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"><figcaption>Live Performance</figcaption></figure>
-<figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"><figcaption>Team / Outdoor Event</figcaption></figure>
-<figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"><figcaption>OMNIA / Live Entertainment</figcaption></figure>
-</div></section>
-<section class="portfolio-block wedding-block">
-<div aria-hidden="true" class="wedding-bg"></div>
-<div class="section-heading reveal"><div><div class="eyebrow">WEDDINGS &amp; PORTRAITURE</div><h2>Quiet details. Real connection.</h2></div>
-<p>Romantic portraiture, storytelling details, and intimate moments without overworking the scene.</p></div>
-<div class="mosaic wedding-mosaic">
-<figure class="tile wide reveal"><img alt="Bride reflected in a mirror" loading="lazy" src="assets/images/bride-mirror.webp"><figcaption>Bridal Portrait</figcaption></figure>
-<figure class="tile tall reveal"><img alt="Wedding rings in front of deep red roses" loading="lazy" src="assets/images/wedding-rings.webp"><figcaption>Wedding Detail</figcaption></figure>
-<figure class="tile tall reveal"><img alt="Wedding couple portrait against stained glass" loading="lazy" src="assets/images/wedding-couple.webp"><figcaption>Wedding Portrait</figcaption></figure>
-</div></section>
-<section class="portfolio-block auto-block">
-<div class="section-heading reveal"><div><div class="eyebrow">AUTOMOTIVE &amp; MOTORSPORTS</div><h2>Motion, metal, and attitude.</h2></div>
-<p>Cars, racing, and the visual culture around them.</p></div>
-<div class="auto-grid">
-<figure class="tile john-force reveal"><img alt="John Force Castrol Funny Car racing alongside another Funny Car" loading="lazy" src="assets/images/john-force-funny-car.jpg"><figcaption>Funny Car / Track Action</figcaption></figure>
-<figure class="tile ratrod reveal"><img alt="Orange Mercury photograph paired with a graphic interpretation" loading="lazy" src="assets/images/mercury-graphic.jpg"><figcaption>Automotive / Graphic Transformation</figcaption></figure>
-</div>
-<p class="small-source-note reveal">The Funny Car image is intentionally presented at a smaller size because the surviving source file is low resolution.</p></section>
-<section aria-label="Capabilities" class="capabilities reveal">
-<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M12 22h10l4-6h12l4 6h10a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5Z"></path><circle cx="32" cy="37" r="11"></circle><circle cx="32" cy="37" r="7"></circle></svg><div><strong>30+ YEARS</strong><span>Professional Photography</span></div></div>
-<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><rect height="35" rx="2.5" width="48" x="8" y="12"></rect><path d="M31 47v8M22 55h20M16 20h32v20H16zM21 36l9-9 7 6 4-4 5 7"></path><circle cx="43" cy="25" r="2.3"></circle></svg><div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div></div>
-<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M25 44h14M27 49h10M32 53v2M24 36c-3-3-5-7-5-11a13 13 0 0 1 26 0c0 5-3 9-6 12l-2 5H27l-3-6Z M32 4v5M12 25h-5M52 25h5M17 10l4 4M47 10l-4 4"></path></svg><div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div></div>
-<div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><g transform="rotate(45 32 32)"><path d="M17 12c-1 9-6 10-6 20s5 11 6 20M47 12c1 9 6 10 6 20s-5 11-6 20"></path><circle cx="32" cy="32" r="10"></circle><path d="M25 7v50M28.5 7v50M32 7v50M35.5 7v50M39 7v50"></path></g></svg><div><strong>GUITAR &amp; CREATIVE LIFE</strong><span>Music, art, and inspiration</span></div></div>
-</section>
-<section class="resume" id="resume">
-<div class="resume-copy reveal"><div class="eyebrow">RESUME</div><h2>Experience meets creativity.</h2>
-<p>Decades of professional photography, creative production, and visual problem-solving.</p>
-<a class="button gold" href="Ken_Resume.pdf" target="_blank" rel="noopener">VIEW RESUME PDF <span>↗</span></a></div>
-<div class="resume-points reveal">
-<div><strong>We The People Holsters</strong><span>Commercial advertising, product photography, graphic design, and digital imaging.</span></div>
-<div><strong>Cashman Professional</strong><span>Weddings, conferences, entertainment, events, client collaboration, and photographer training.</span></div>
-<div><strong>Canon</strong><span>EOS technical support, photographic education, and creative problem-solving.</span></div>
-<div><strong>Sitel</strong><span>Team leadership, coaching, and production-minded workflows.</span></div>
-</div></section>
-<section class="contact" id="contact">
-<div aria-hidden="true" class="sunset"><div class="mountain one"></div><div class="mountain two"></div></div>
-<div class="contact-inner reveal">
-<div class="eyebrow">READY TO CREATE SOMETHING MEMORABLE?</div>
-<h2>Let's make something worth looking at.</h2>
-<p>Available for visual-content, product-imaging, graphics, and creative-production opportunities.</p>
-<div class="contact-actions">
-<a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a>
-<a class="button" href="tel:+17578165955">757.816.5955</a>
-</div></div></section>
-</main>
-<footer><span>© 2026 Ken Israelson</span><span>Murfreesboro, Tennessee</span></footer>
-<script src="script.js"></script>
-</body>
-</html>
+<section class="portfolio-block product-block"><div class="section-heading reveal"><div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the subject matter.</h2></div><p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p></div><div class="mosaic product-mosaic"><figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"><figcaption>Tabletop / Technology</figcaption></figure><figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" src="hero-product.JPG" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'"><figcaption>Product / Lifestyle Studio</figcaption></figure></div></section>
+<section class="portfolio-block creative-block"><div class="section-heading reveal"><div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div><p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p></div><div class="mosaic creative-mosaic"><figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure><figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"><figcaption>Music Product Advertising</figcaption></figure><figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure></div></section>
+<section class="portfolio-block event-block"><div class="section-heading reveal"><div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div><p>Live performance, corporate events, audiences, and candid human interaction.</p></div><div class="mosaic events-mosaic"><figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"><figcaption>Live Performance</figcaption></figure><figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"><figcaption>Team / Outdoor Event</figcaption></figure><figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"><figcaption>OMNIA / Live Entertainment</figcaption></figure></div></section>
+<section class="portfolio-block wedding-block"><div aria-hidden="true" class="wedding-bg"></div><div class="section-heading reveal"><div><div class="eyebrow">WEDDINGS &amp; PORTRAITURE</div><h2>Quiet details. Real connection.</h2></div><p>Romantic portraiture, storytelling details, and intimate moments without overworking the scene.</p></div><div class="mosaic wedding-mosaic"><figure class="tile wide reveal"><img alt="Bride reflected in a mirror" loading="lazy" src="assets/images/bride-mirror.webp"><figcaption>Wedding Portrait</figcaption></figure><figure class="tile tall reveal"><img alt="Wedding rings in front of deep red roses" loading="lazy" src="assets/images/wedding-rings.webp"><figcaption>Wedding Detail</figcaption></figure><figure class="tile tall reveal"><img alt="Wedding couple portrait against stained glass" loading="lazy" src="assets/images/wedding-couple.webp"><figcaption>Bridal Portrait</figcaption></figure></div></section>
+<section class="portfolio-block auto-block"><div class="section-heading reveal"><div><div class="eyebrow">AUTOMOTIVE &amp; MOTORSPORTS</div></div></div><div class="auto-grid"><figure class="tile john-force reveal"><img alt="John Force Castrol Funny Car racing alongside another Funny Car" loading="lazy" src="assets/images/john-force-funny-car.jpg"><figcaption>Funny Car / Track Action</figcaption></figure><figure class="tile ratrod reveal"><img alt="Orange Mercury photograph paired with a graphic interpretation" loading="lazy" src="assets/images/mercury-graphic.jpg"><figcaption>Automotive / Graphic Transformation</figcaption></figure></div></section>
+<section class="portfolio-block landscape-block" aria-labelledby="landscape-heading"><div class="section-heading reveal"><div><h2 id="landscape-heading">Landscape Photography</h2></div></div><div class="landscape-gallery"><figure class="panorama reveal"><img alt="Sedona panoramic landscape" loading="lazy" src="sedona-panorama-sunny-final.jpg"><figcaption>Sedona / Panorama</figcaption></figure><figure class="reveal"><img alt="Alaska river photographed with a slow shutter" loading="lazy" src="alaska-river.webp" onerror="this.onerror=null;this.src='assets/images/alaska-river.webp'"><figcaption>Alaska / River</figcaption></figure><figure class="reveal"><img alt="Glacier calving in Alaska" loading="lazy" src="glacier-calving.webp" onerror="this.onerror=null;this.src='assets/images/glacier-calving.webp'"><figcaption>Alaska / Glacier Calving</figcaption></figure></div></section>
+<section aria-label="Capabilities" class="capabilities reveal"><div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M12 22h10l4-6h12l4 6h10a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H12a5 5 0 0 1-5-5V27a5 5 0 0 1 5-5Z"></path><circle cx="32" cy="37" r="11"></circle><circle cx="32" cy="37" r="7"></circle></svg><div><strong>30+ YEARS</strong><span>Professional Photography</span></div></div><div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><rect height="35" rx="2.5" width="48" x="8" y="12"></rect><path d="M31 47v8M22 55h20M16 20h32v20H16zM21 36l9-9 7 6 4-4 5 7"></path><circle cx="43" cy="25" r="2.3"></circle></svg><div><strong>GRAPHICS &amp; DESIGN</strong><span>Photoshop • Retouching • Compositing</span></div></div><div class="capability"><svg aria-hidden="true" viewBox="0 0 64 64"><path d="M25 44h14M27 49h10M32 53v2M24 36c-3-3-5-7-5-11a13 13 0 0 1 26 0c0 5-3 9-6 12l-2 5H27l-3-6Z M32 4v5M12 25h-5M52 25h5M17 10l4 4M47 10l-4 4"></path></svg><div><strong>CREATIVE SOLUTIONS</strong><span>Ideas. Execution. Results.</span></div></div></section>
+<section class="resume" id="resume"><div class="resume-copy reveal"><div class="eyebrow">RESUME</div><h2>Experience meets creativity.</h2><p>Decades of professional photography, creative production, and visual problem-solving.</p><a class="button gold" href="Ken_Resume.pdf" target="_blank" rel="noopener">VIEW RESUME PDF <span>↗</span></a></div><div class="resume-points reveal"><div><strong>We The People Holsters</strong><span>Commercial advertising, product photography, graphic design, and digital imaging.</span></div><div><strong>Cashman Professional</strong><span>Weddings, conferences, entertainment, events, client collaboration, and photographer training.</span></div><div><strong>Canon</strong><span>EOS technical support, photographic education, and creative problem-solving.</span></div><div><strong>Sitel</strong><span>Team leadership, coaching, and production-minded workflows.</span></div></div></section>
+<section class="contact" id="contact"><div aria-hidden="true" class="sunset"><div class="mountain one"></div><div class="mountain two"></div></div><div class="contact-inner reveal"><div class="eyebrow">READY TO CREATE SOMETHING MEMORABLE?</div><h2>Let's make something worth looking at.</h2><p>Available for visual-content, product-imaging, graphics, and creative-production opportunities.</p><div class="contact-actions"><a class="button gold" href="mailto:kenimail@yahoo.com">GET IN TOUCH <span>→</span></a><a class="button" href="tel:+17578165955">757.816.5955</a></div></div></section>
+</main><footer><span>© 2026 Ken Israelson</span><span>Murfreesboro, Tennessee</span></footer><script src="script.js"></script></body></html>
