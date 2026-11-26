@@ -61,6 +61,12 @@ body .capabilities{grid-template-columns:repeat(3,minmax(0,1fr))}
 .landscape-gallery img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
 .landscape-gallery figcaption{padding:10px 6px;font-size:14px}
 @media(max-width:760px){body .capabilities{grid-template-columns:1fr}.landscape-gallery{width:100%;grid-template-columns:1fr}}
+
+.tradeshow-gallery{width:90%;max-width:1120px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,48px)}
+.tradeshow-gallery figure{margin:0;min-width:0}
+.tradeshow-gallery img{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px}
+.tradeshow-gallery figcaption{padding:10px 6px;font-size:14px}
+@media(max-width:760px){.tradeshow-gallery{width:100%}}
 </style>
 </head>
 <body>
@@ -128,6 +134,13 @@ const io=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting 
 </script></section>
 <div class="showcase-grid concept-outpost-grid backyard-projects"><figure class="showcase-item reveal"><img alt="Backyard project concept 01" loading="lazy" decoding="async" src="Backyard_Project_01.png"></figure><figure class="showcase-item reveal"><img alt="Backyard project concept 02" loading="lazy" decoding="async" src="Backyard_Project_02.png"></figure></div>
 </section>
+<section class="portfolio-block tradeshow-block" aria-labelledby="tradeshow-heading">
+<div class="section-heading reveal"><div><div class="eyebrow">EXPERIENTIAL DESIGN</div><h2 id="tradeshow-heading">Tradeshow Booth Concepts</h2></div><p>Independent concept designs for branded exhibition environments.</p></div>
+<div class="tradeshow-gallery">
+<figure class="reveal"><img alt="Azurea Cay Resort aquarium exhibition concept" loading="lazy" decoding="async" src="Azurea%20Cay%20Resort%20Aquarium%20Exhibit.png"><figcaption>Azurea Cay Resort / Aquarium Exhibit Concept</figcaption></figure>
+<figure class="reveal"><img alt="Azurea Cay tradeshow booth specification sheet" loading="lazy" decoding="async" src="Azurea_Cay_Tradeshow_Booth_Spec_Sheet.png"><figcaption>Azurea Cay / Concept Specification Sheet</figcaption></figure>
+<figure class="reveal"><img alt="Valohstra automotive tradeshow booth concept" loading="lazy" decoding="async" src="Valohstra%20Tradeshow%20Booth.png"><figcaption>VALOHSTRA / Automotive Exhibition Concept</figcaption></figure>
+</div></section>
 <section class="portfolio-block product-block"><div class="section-heading reveal"><div><div class="eyebrow">PRODUCT &amp; E-COMMERCE</div><h2>Built to make the subject matter.</h2></div><p>Controlled light, clean surfaces, believable texture, and production-minded consistency.</p></div><div class="mosaic product-mosaic"><figure class="tile reveal"><img alt="NVMe enclosure on reflective surface" loading="lazy" src="assets/images/nvme-enclosure.webp"><figcaption>Tabletop / Technology</figcaption></figure><figure class="tile reveal product-holster"><img alt="Holster product photograph on industrial bench" loading="lazy" src="hero-product.JPG" onerror="this.onerror=null;this.src='assets/images/hero-product.webp'"><figcaption>Product / Lifestyle Studio</figcaption></figure></div></section>
 <section class="portfolio-block creative-block"><div class="section-heading reveal"><div><div class="eyebrow">GRAPHICS AND CREATIVE COMPOSITING</div><h2>Photography pushed further.</h2></div><p>Campaign concepts, visual treatments, compositing, graphic transformation, and AI-assisted creative production.</p></div><div class="mosaic creative-mosaic"><figure class="tile tall reveal"><img alt="Oakley Rafter volcanic advertising concept" loading="lazy" src="assets/images/oakley-rafter-lava.webp"><figcaption>Advertising Concept / Oakley Rafter</figcaption></figure><figure class="tile wide reveal"><img alt="ESP LTD MH-350FM advertising composition" loading="lazy" src="assets/images/esp-ltd-mh350fm.webp"><figcaption>Music Product Advertising</figcaption></figure><figure class="tile wide reveal"><img alt="Corvette burnout pop-out compositing treatment" loading="lazy" src="assets/images/corvette-popout.webp"><figcaption>Automotive Composite / Dimensional Frame</figcaption></figure></div></section>
 <section class="portfolio-block event-block"><div class="section-heading reveal"><div><div class="eyebrow">PEOPLE &amp; EVENTS</div><h2>Moments with energy.</h2></div><p>Live performance, corporate events, audiences, and candid human interaction.</p></div><div class="mosaic events-mosaic"><figure class="tile tall reveal"><img alt="Aerial performance over a water stage" loading="lazy" src="assets/images/le-reve-enhanced.webp"><figcaption>Live Performance</figcaption></figure><figure class="tile reveal"><img alt="Outdoor corporate team event" loading="lazy" src="assets/images/event-outdoor.webp"><figcaption>Team / Outdoor Event</figcaption></figure><figure class="tile reveal omnia-event"><img alt="OMNIA nightclub kinetic chandelier and theatrical lighting" loading="lazy" src="Omnia.jpg"><figcaption>OMNIA / Live Entertainment</figcaption></figure></div></section>
